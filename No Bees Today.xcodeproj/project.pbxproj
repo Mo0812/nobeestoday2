@@ -12,6 +12,12 @@
 		C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E31ED0EB21002DBF5A /* Main.storyboard */; };
 		C5F263E71ED0EB21002DBF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E61ED0EB21002DBF5A /* Assets.xcassets */; };
 		C5F263EA1ED0EB21002DBF5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E81ED0EB21002DBF5A /* LaunchScreen.storyboard */; };
+		C5F263F51ED0F5C1002DBF5A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263F41ED0F5C1002DBF5A /* NotificationService.swift */; };
+		C5F263F71ED0F7FB002DBF5A /* GlobalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */; };
+		C5F263FB1ED0FA24002DBF5A /* PillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263FA1ED0FA24002DBF5A /* PillCell.swift */; };
+		C5F263FD1ED0FB86002DBF5A /* PillCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263FC1ED0FB86002DBF5A /* PillCalendarController.swift */; };
+		C5F264001ED0FC4C002DBF5A /* PillDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263FF1ED0FC4C002DBF5A /* PillDay.swift */; };
+		C5F264021ED1021E002DBF5A /* PillCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F264011ED1021E002DBF5A /* PillCycle.swift */; };
 		F2B8F4B0E1CDBEE25C7C4E04 /* Pods_No_Bees_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +31,12 @@
 		C5F263E61ED0EB21002DBF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5F263E91ED0EB21002DBF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5F263EB1ED0EB21002DBF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5F263F41ED0F5C1002DBF5A /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalValues.swift; sourceTree = "<group>"; };
+		C5F263FA1ED0FA24002DBF5A /* PillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillCell.swift; sourceTree = "<group>"; };
+		C5F263FC1ED0FB86002DBF5A /* PillCalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillCalendarController.swift; sourceTree = "<group>"; };
+		C5F263FF1ED0FC4C002DBF5A /* PillDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillDay.swift; sourceTree = "<group>"; };
+		C5F264011ED1021E002DBF5A /* PillCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillCycle.swift; sourceTree = "<group>"; };
 		D19E3C047BF19774457B3C01 /* Pods-No Bees Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +90,9 @@
 		C5F263DE1ED0EB21002DBF5A /* No Bees Today */ = {
 			isa = PBXGroup;
 			children = (
+				C5F263FE1ED0FC3F002DBF5A /* Models */,
+				C5F263F81ED0FA02002DBF5A /* Views */,
+				C5F263F31ED0F5A2002DBF5A /* Globals */,
 				C5F263DF1ED0EB21002DBF5A /* AppDelegate.swift */,
 				C5F263E11ED0EB21002DBF5A /* MainPageViewController.swift */,
 				C5F263E31ED0EB21002DBF5A /* Main.storyboard */,
@@ -94,6 +109,41 @@
 				C5F263EB1ED0EB21002DBF5A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5F263F31ED0F5A2002DBF5A /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				C5F263F41ED0F5C1002DBF5A /* NotificationService.swift */,
+				C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */,
+			);
+			name = Globals;
+			sourceTree = "<group>";
+		};
+		C5F263F81ED0FA02002DBF5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5F263F91ED0FA07002DBF5A /* PillCalendar */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C5F263F91ED0FA07002DBF5A /* PillCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				C5F263FA1ED0FA24002DBF5A /* PillCell.swift */,
+				C5F263FC1ED0FB86002DBF5A /* PillCalendarController.swift */,
+			);
+			name = PillCalendar;
+			sourceTree = "<group>";
+		};
+		C5F263FE1ED0FC3F002DBF5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5F263FF1ED0FC4C002DBF5A /* PillDay.swift */,
+				C5F264011ED1021E002DBF5A /* PillCycle.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F263E21ED0EB21002DBF5A /* MainPageViewController.swift in Sources */,
+				C5F263FB1ED0FA24002DBF5A /* PillCell.swift in Sources */,
+				C5F263FD1ED0FB86002DBF5A /* PillCalendarController.swift in Sources */,
+				C5F264021ED1021E002DBF5A /* PillCycle.swift in Sources */,
+				C5F263F51ED0F5C1002DBF5A /* NotificationService.swift in Sources */,
+				C5F263F71ED0F7FB002DBF5A /* GlobalValues.swift in Sources */,
+				C5F264001ED0FC4C002DBF5A /* PillDay.swift in Sources */,
 				C5F263E01ED0EB21002DBF5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

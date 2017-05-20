@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //NotificationService.sharedInstance.initNotificationService()
+        GlobalValues.initDates()
         return true
     }
 
@@ -41,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
+        NotificationService.sharedInstance.handle(action: identifier!)
+        completionHandler() // per developer documentation, app will terminate if we fail to call this
+    }
 }
 
