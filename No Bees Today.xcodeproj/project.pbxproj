@@ -26,7 +26,6 @@
 		1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_No_Bees_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64E6E284D6925C5723C588 /* Pods-No Bees Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C5C2DCDC1ED3866A00E5B523 /* PillTakingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillTakingController.swift; sourceTree = "<group>"; };
-		C5C2DCDF1ED3940700E5B523 /* SimpleCacheStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SimpleCacheStore.framework; sourceTree = "<group>"; };
 		C5F263DC1ED0EB21002DBF5A /* No Bees Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No Bees Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F263DF1ED0EB21002DBF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F263E11ED0EB21002DBF5A /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 		C5F263D31ED0EB21002DBF5A = {
 			isa = PBXGroup;
 			children = (
-				C5C2DCDF1ED3940700E5B523 /* SimpleCacheStore.framework */,
 				C5F263DE1ED0EB21002DBF5A /* No Bees Today */,
 				C5F263DD1ED0EB21002DBF5A /* Products */,
 				12A4ACDD9C82BA73305644BD /* Pods */,

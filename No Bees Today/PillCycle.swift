@@ -26,7 +26,7 @@ class PillCycle {
         var currentDay = self.startDate
         for day in 0..<28 {
             if let currentPillDay = self.getPillDay(from: currentDay) {
-                self.cycle.append(PillDay(day: currentPillDay.day, state: currentPillDay.state))
+                self.cycle.append(PillDay(day: currentPillDay.day, state: PillDay.PillDayState(rawValue: currentPillDay.state)!))
             } else {
                 if (20...27).contains(day) {
                     let pd = PillDay(day: currentDay, state: PillDay.PillDayState.pillBlood)

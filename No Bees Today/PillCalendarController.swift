@@ -83,11 +83,11 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
         cell.dateLabel.text = formatter.string(from: pillDay.day as Date)
         
         switch(pillDay.state) {
-        case .pillTaken:
+        case 0:
             cell.pillImage.image = UIImage(named: "pill-taken")
-        case .pillNotYetTaken:
+        case 3:
             cell.pillImage.image = UIImage(named: "pill")
-        case .pillBlood:
+        case 1:
             cell.pillImage.image = UIImage(named: "blood")
         default:
             cell.pillImage.image = UIImage(named: "pill")

@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-class PillDay: NSObject, NSCoding {
+class PillDay: Object {
     
     enum PillDayState: Int {
         case pillTaken = 0
@@ -17,26 +18,13 @@ class PillDay: NSObject, NSCoding {
         case pillNotYetTaken = 3
     }
     
-    var day: Date
-    var state: PillDayState
+    dynamic var day: Date = Date()
+    dynamic var state: Int = 0
     
-    init(day: Date, state: PillDayState) {
+    convenience public init(day: Date, state: PillDayState) {
+        self.init()
         self.day = day
-        self.state = state
+        self.state = state.rawValue
     }
     
-    required convenience init?(coder aDecoder: NSCoder) {
-        guard let day = aDecoder.decodeObject(forKey: "day") as? Date,
-            let state = aDecoder.decodeObject(forKey: "state") as? Int
-            else {
-                return nil
-        }
-        
-        self.init(day: day, state: .pillTaken)
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.day, forKey: "day")
-        aCoder.encode(0, forKey: "state")
-    }
 }
