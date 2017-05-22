@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PillDay: NSCoding {
+class PillDay: NSObject, NSCoding {
     
     enum PillDayState: Int {
         case pillTaken = 0
@@ -32,11 +32,11 @@ class PillDay: NSCoding {
                 return nil
         }
         
-        self.init(day: day, state: PillDay.PillDayState(rawValue: state)!)
+        self.init(day: day, state: .pillTaken)
     }
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.day, forKey: "day")
-        aCoder.encode(self.state, forKey: "state")
+        aCoder.encode(0, forKey: "state")
     }
 }

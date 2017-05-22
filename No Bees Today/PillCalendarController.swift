@@ -30,7 +30,7 @@ class PillCalendarController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let currentPeriod = GlobalValues.currentTakinPeriod {
+        if let currentPeriod = GlobalValues.currentTakingPeriod {
             let pillCylce = PillCycle(startDate: currentPeriod)
             self.pillCycleArr = pillCylce.cycle
             self.collectionView.reloadData()
@@ -60,13 +60,13 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return pillCycleArr.count
+        return 1
     }
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return pillCycleArr.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -83,10 +83,14 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
         cell.dateLabel.text = formatter.string(from: pillDay.day as Date)
         
         switch(pillDay.state) {
+        case .pillTaken:
+            cell.pillImage.image = UIImage(named: "pill-taken")
         case .pillNotYetTaken:
-            cell.pillImage.image = UIImage(named: "settings-nav")
+            cell.pillImage.image = UIImage(named: "pill")
+        case .pillBlood:
+            cell.pillImage.image = UIImage(named: "blood")
         default:
-            cell.pillImage.image = UIImage(named: "settings-nav")
+            cell.pillImage.image = UIImage(named: "pill")
         }
         
         return cell
