@@ -30,11 +30,7 @@ class PillCalendarController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let currentPeriod = GlobalValues.currentTakingPeriod {
-            let pillCylce = PillCycle(startDate: currentPeriod)
-            self.pillCycleArr = pillCylce.cycle
-            self.collectionView.reloadData()
-        }
+        updatePillCycle()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +38,34 @@ class PillCalendarController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func updatePillCycle() {
+        if let currentPeriod = GlobalValues.currentTakingPeriod {
+            let pillCylce = PillCycle(startDate: currentPeriod)
+            self.pillCycleArr = pillCylce.cycle
+            self.collectionView.reloadData()
+        }
+    }
     
+    func showActionSheet(controlledPillDay: PillDay) {
+        let actionSheetController = UIAlertController(title: "Status", message: "Was hast du an diesem Tag gemacht?", preferredStyle: .actionSheet)
+        let pillTakenButton = UIAlertAction(title: "Pille genommen", style: .default, handler: {
+            action in
+            controlledPillDay.updateState(state: .pillTaken)
+            self.updatePillCycle()
+        })
+        let pillForgottenButton = UIAlertAction(title: "Pille vergessen", style: .destructive, handler: {
+            action in
+            controlledPillDay.updateState(state: .pillForgotten)
+            self.updatePillCycle()
+        })
+        let pillCancelButton = UIAlertAction(title: "Abbrechen", style: .cancel, handler: {
+            action in
+        })
+        actionSheetController.addAction(pillTakenButton)
+        actionSheetController.addAction(pillForgottenButton)
+        actionSheetController.addAction(pillCancelButton)
+        self.present(actionSheetController, animated: true, completion: nil)
+    }
 }
 
 extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -85,8 +108,8 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
         switch(pillDay.state) {
         case 0:
             cell.pillImage.image = UIImage(named: "pill-taken")
-        case 3:
-            cell.pillImage.image = UIImage(named: "pill")
+        case 2:
+            cell.pillImage.image = UIImage(named: "pill-forgotten")
         case 1:
             cell.pillImage.image = UIImage(named: "blood")
         default:
@@ -97,6 +120,10 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
     }
 
     // MARK: UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.showActionSheet(controlledPillDay: self.pillCycleArr[indexPath.row])
+    }
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -121,8 +148,8 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
         return false
     }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    
+    func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
     }
     */

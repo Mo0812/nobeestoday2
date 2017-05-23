@@ -27,4 +27,19 @@ class PillDay: Object {
         self.state = state.rawValue
     }
     
+    public func updateState(state: PillDayState) {
+        let realm = try! Realm()
+        
+        let pd = realm.objects(PillDay.self).filter("day = %@", self.day).first
+        
+        if let pd = pd {
+            try! realm.write {
+                pd.state = state.rawValue
+            }
+        } else {
+            try! realm.write {
+                realm.add(self)
+            }
+        }
+    }
 }

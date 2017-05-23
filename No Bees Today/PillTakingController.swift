@@ -16,16 +16,23 @@ class PillTakingController: UIViewController {
     let formatter = DateFormatter()
     var dateTarget: TimeInterval = 0.0
     var timer: Timer?
+    var currentPillDay: PillDay?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.updateTimeDiff()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if let currentPeriod = GlobalValues.currentTakingPeriod {
+            let pc = PillCycle(startDate: currentPeriod)
+            self.currentPillDay = pc.getCurrentPillDay()
+        }
+        
+        self.updateTimeDiff()
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(PillTakingController.updateTimeDiff), userInfo: nil, repeats: true)
     }
@@ -45,23 +52,21 @@ class PillTakingController: UIViewController {
     }
     
     func updateTimeDiff() {
-        if(false) {
-            self.pillLabel.text = "Für heute ist alles:"
-            self.pillLabel.textColor = UIColor.gray
-            self.pillTimer.text = "Erledigt"
-            self.pillTimer.textColor = UIColor.black
+        if let currentPD = self.currentPillDay {
+            // Auswertung des Pillenstatus
         } else {
             let timeDiff = NSCalendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: GlobalValues.getTimePerDay()!)
             
-            self.pillTimer.text = "\(timeDiff.hour!):\(timeDiff.minute!):\(timeDiff.second!)"
-            
+            var pillTimerString = "\(abs(timeDiff.hour!)):\(abs(timeDiff.minute!)):\(abs(timeDiff.second!))"
             if(timeDiff.hour! > 0 || timeDiff.minute! > 0 || timeDiff.second! > 0) {
-                self.pillTimer.textColor = UIColor.red
-                self.pillLabel.text = "Du hast deine Pille noch nicht genommen:"
-            } else {
                 self.pillTimer.textColor = UIColor.black
                 self.pillLabel.text = "Zeit bis zur Pilleneinnahme:"
+            } else {
+                self.pillTimer.textColor = UIColor.red
+                self.pillLabel.text = "Du hast deine Pille noch nicht genommen:"
+                pillTimerString = "- " + pillTimerString
             }
+            self.pillTimer.text = pillTimerString
         }
     }
     

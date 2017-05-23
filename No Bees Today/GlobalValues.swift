@@ -17,7 +17,7 @@ class GlobalValues {
     class func initDates() {
         self.setFirstTakingDate(Date())
         self.setCurrentTakingPeriod(Date())
-        self.setTimePerDay(value: "19:00:00")
+        self.setTimePerDay(value: "19:30:00")
     }
     
     class func setFirstTakingDate(_ date: Date) {

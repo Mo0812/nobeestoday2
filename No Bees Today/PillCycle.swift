@@ -7,15 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
 class PillCycle {
     
     var cycle: [PillDay]
     let startDate: Date
+    let realm: Realm
     
     init(startDate: Date) {
         self.startDate = startDate
         self.cycle = [PillDay]()
+        self.realm = try! Realm()
         
         self.createCycle()
     }
@@ -26,13 +29,14 @@ class PillCycle {
         var currentDay = self.startDate
         for day in 0..<28 {
             if let currentPillDay = self.getPillDay(from: currentDay) {
-                self.cycle.append(PillDay(day: currentPillDay.day, state: PillDay.PillDayState(rawValue: currentPillDay.state)!))
+                self.cycle.append(currentPillDay)
             } else {
                 if (20...27).contains(day) {
                     let pd = PillDay(day: currentDay, state: PillDay.PillDayState.pillBlood)
                     self.cycle.append(pd)
-                    let scsLabel = "pd" + String(currentDay.timeIntervalSinceReferenceDate)
-                    let scsLabel2 = "pc" + String(self.startDate.timeIntervalSinceReferenceDate)
+                    try! self.realm.write {
+                        self.realm.add(pd)
+                    }
                 } else {
                     self.cycle.append(PillDay(day: currentDay, state: PillDay.PillDayState.pillNotYetTaken))
                 }
@@ -43,8 +47,12 @@ class PillCycle {
     }
     
     private func getPillDay(from storage: Date) -> PillDay? {
-        let scsLabel = "pd" + String(storage.timeIntervalSinceReferenceDate)
-        return nil
+        let searchedPD = realm.objects(PillDay.self).filter("day = %@", storage).first
+        return searchedPD
+    }
+    
+    public func getCurrentPillDay() -> PillDay? {
+        return self.getPillDay(from: Date())
     }
     
 }
