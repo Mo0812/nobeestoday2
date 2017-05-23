@@ -63,7 +63,7 @@ class GlobalValues {
     
     class func normalizeDate(_ date: Date) -> Date {
         let calendar = Calendar.current
-        let components = (calendar as NSCalendar).components([.year, .month, .day], from: date)
+        let components = calendar.dateComponents([.year, .month, .day], from: date)
         let rightDate = calendar.date(from: components)
         return rightDate!
     }

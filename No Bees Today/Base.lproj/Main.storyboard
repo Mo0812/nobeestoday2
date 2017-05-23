@@ -39,7 +39,7 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="pillTaken:" destination="FpG-jd-3Ed" eventType="touchUpInside" id="Kj4-bf-dmJ"/>
+                                    <action selector="pillTaken:" destination="FpG-jd-3Ed" eventType="touchUpInside" id="Tz9-7B-xRQ"/>
                                 </connections>
                             </button>
                         </subviews>

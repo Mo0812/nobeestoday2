@@ -27,18 +27,28 @@ class PillDay: Object {
         self.state = state.rawValue
     }
     
-    public func updateState(state: PillDayState) {
+    public func updateState(state: PillDayState, result: (Bool) -> ()) {
         let realm = try! Realm()
         
         let pd = realm.objects(PillDay.self).filter("day = %@", self.day).first
         
         if let pd = pd {
-            try! realm.write {
-                pd.state = state.rawValue
+            do {
+                try! realm.write {
+                    pd.state = state.rawValue
+                }
+                result(true)
+            } catch {
+                result(false)
             }
         } else {
-            try! realm.write {
-                realm.add(self)
+            do {
+                try! realm.write {
+                    realm.add(self)
+                }
+                result(true)
+            } catch {
+                result(false)
             }
         }
     }

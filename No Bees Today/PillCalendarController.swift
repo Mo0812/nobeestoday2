@@ -50,13 +50,21 @@ class PillCalendarController: UIViewController {
         let actionSheetController = UIAlertController(title: "Status", message: "Was hast du an diesem Tag gemacht?", preferredStyle: .actionSheet)
         let pillTakenButton = UIAlertAction(title: "Pille genommen", style: .default, handler: {
             action in
-            controlledPillDay.updateState(state: .pillTaken)
-            self.updatePillCycle()
+            controlledPillDay.updateState(state: .pillTaken, result: {
+                success in
+                if(success) {
+                    self.updatePillCycle()
+                }
+            })
         })
         let pillForgottenButton = UIAlertAction(title: "Pille vergessen", style: .destructive, handler: {
             action in
-            controlledPillDay.updateState(state: .pillForgotten)
-            self.updatePillCycle()
+            controlledPillDay.updateState(state: .pillForgotten, result: {
+                success in
+                if(success) {
+                    self.updatePillCycle()
+                }
+            })
         })
         let pillCancelButton = UIAlertAction(title: "Abbrechen", style: .cancel, handler: {
             action in
