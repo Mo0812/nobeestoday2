@@ -16,7 +16,7 @@ class PillCycle {
     let realm: Realm
     
     init(startDate: Date) {
-        self.startDate = startDate
+        self.startDate = GlobalValues.normalizeDate(startDate)
         self.cycle = [PillDay]()
         self.realm = try! Realm()
         
@@ -46,13 +46,13 @@ class PillCycle {
         }
     }
     
-    private func getPillDay(from storage: Date) -> PillDay? {
-        let searchedPD = realm.objects(PillDay.self).filter("day = %@", storage).first
-        return searchedPD
+    private func getPillDay(from: Date) -> PillDay? {
+        let searchedPD = realm.objects(PillDay.self).filter("day = %@", from)
+        return searchedPD.first
     }
     
     public func getCurrentPillDay() -> PillDay? {
-        return self.getPillDay(from: Date())
+        return self.getPillDay(from: GlobalValues.normalizeDate(Date()))
     }
     
 }

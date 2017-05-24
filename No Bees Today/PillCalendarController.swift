@@ -116,10 +116,10 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
         switch(pillDay.state) {
         case 0:
             cell.pillImage.image = UIImage(named: "pill-taken")
-        case 2:
-            cell.pillImage.image = UIImage(named: "pill-forgotten")
         case 1:
             cell.pillImage.image = UIImage(named: "blood")
+        case 2:
+            cell.pillImage.image = UIImage(named: "pill-forgotten")
         default:
             cell.pillImage.image = UIImage(named: "pill")
         }
