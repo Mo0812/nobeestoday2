@@ -1,0 +1,60 @@
+
+/* Class = "UIButton"; normalTitle = "Pille genommen"; ObjectID = "09o-hb-5ej"; */
+"09o-hb-5ej.normalTitle" = "Pill taken";
+
+/* Class = "UIButton"; normalTitle = "Fertig"; ObjectID = "1IL-IQ-oBj"; */
+"1IL-IQ-oBj.normalTitle" = "Finished";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1SN-ds-Yaq"; */
+"1SN-ds-Yaq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Weiter"; ObjectID = "3aN-ud-gEU"; */
+"3aN-ud-gEU.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Einrichtung abgeschlossen."; ObjectID = "3nT-Sq-PmL"; */
+"3nT-Sq-PmL.text" = "Installation finished.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7EH-EJ-2hR"; */
+"7EH-EJ-2hR.text" = "Label";
+
+/* Class = "UILabel"; text = "Einrichtung"; ObjectID = "7d3-S1-KAo"; */
+"7d3-S1-KAo.text" = "Installation";
+
+/* Class = "UILabel"; text = "Einrichtung"; ObjectID = "Deb-Z4-hAB"; */
+"Deb-Z4-hAB.text" = "Installation";
+
+/* Class = "UIButton"; normalTitle = "Daten löschen"; ObjectID = "Fbh-HP-UMu"; */
+"Fbh-HP-UMu.normalTitle" = "Clear Data";
+
+/* Class = "UILabel"; text = "(c) by Moritz Kanzler"; ObjectID = "Ggz-ec-7ym"; */
+"Ggz-ec-7ym.text" = "(c) by Moritz Kanzler";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IXD-dV-7jq"; */
+"IXD-dV-7jq.text" = "Label";
+
+/* Class = "UILabel"; text = " 🐝"; ObjectID = "QrY-Da-OPF"; */
+"QrY-Da-OPF.text" = " 🐝";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "W0d-i3-gPm"; */
+"W0d-i3-gPm.text" = "Status";
+
+/* Class = "UIButton"; normalTitle = "Einstellungen öffnen"; ObjectID = "cEJ-6m-SbR"; */
+"cEJ-6m-SbR.normalTitle" = "Run Installation again";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gkk-b2-poB"; */
+"gkk-b2-poB.text" = "Label";
+
+/* Class = "UILabel"; text = "No Bees Today"; ObjectID = "rZQ-Z4-Ted"; */
+"rZQ-Z4-Ted.text" = "No Bees Today";
+
+/* Class = "UILabel"; text = "Einrichtung"; ObjectID = "rnM-BY-VAe"; */
+"rnM-BY-VAe.text" = "Installation";
+
+/* Class = "UILabel"; text = "Wann hast du zuletzt begonnen die Pille zu nehmen?"; ObjectID = "sAX-E3-LBH"; */
+"sAX-E3-LBH.text" = "When did you start to take the pill in this cycle?";
+
+/* Class = "UIButton"; normalTitle = "Weiter"; ObjectID = "sQh-eM-BKd"; */
+"sQh-eM-BKd.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Zu welcher Uhrzeit nimmst du die Pille gewöhnlich?"; ObjectID = "tGL-fe-Hgs"; */
+"tGL-fe-Hgs.text" = "At which time you take the pill normally every day?";
