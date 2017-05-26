@@ -26,6 +26,7 @@ class MainPageViewController: UIPageViewController {
         dataSource = self
         
         setViewControllers([orderedViewControllers[1]], direction: .forward, animated: false, completion: nil)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +34,7 @@ class MainPageViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindFromPinDetailView(segue: UIStoryboardSegue) {
+    @IBAction func unwindFromPreSettingsView(segue: UIStoryboardSegue) {
         
     }
     

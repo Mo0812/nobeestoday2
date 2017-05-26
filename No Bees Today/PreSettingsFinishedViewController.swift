@@ -1,16 +1,14 @@
 //
-//  SettingsViewController.swift
+//  PreSettingsFinishedViewController.swift
 //  No Bees Today
 //
-//  Created by Moritz Kanzler on 24.05.17.
+//  Created by Moritz Kanzler on 26.05.17.
 //  Copyright © 2017 Moritz Kanzler. All rights reserved.
 //
 
 import UIKit
-import RealmSwift
-import Toast_Swift
 
-class SettingsViewController: UIViewController {
+class PreSettingsFinishedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +21,13 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clearRealmStorage(_ sender: Any) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
-        self.view.makeToast("Alle Daten wurden gelöscht", duration: 2.0, position: .bottom)
+    @IBAction func closePreSettings(_ sender: Any) {
+        let preSettingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainPageViewController")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = preSettingsVC
+        appDelegate.window?.makeKeyAndVisible()
     }
 
-    @IBAction func showPreSettings(_ sender: Any) {
-        self.performSegue(withIdentifier: "showPreSettingsView", sender: self)
-    }
     /*
     // MARK: - Navigation
 

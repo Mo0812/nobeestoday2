@@ -17,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //NotificationService.sharedInstance.initNotificationService()
-        GlobalValues.initDates()
+        let initSuccess = GlobalValues.initDates()
+        if !initSuccess {
+            let preSettingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PreSettingsView")
+            self.window?.rootViewController = preSettingsVC
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

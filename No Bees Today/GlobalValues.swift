@@ -14,51 +14,63 @@ class GlobalValues {
     static var currentTakingPeriod: Date?
     static private var takingTimePerDay: Date?
     
-    class func initDates() {
-        self.setFirstTakingDate(Date())
+    class func initDates() -> Bool {
+        /*self.setFirstTakingDate(Date())
         self.setCurrentTakingPeriod(Date())
-        self.setTimePerDay(value: "19:30:00")
+        self.setTimePerDay(value: "19:30:00")*/
+        
+        let estimatedFTD = UserDefaults.standard.value(forKey: "FirstTakingDate") as? Date
+        let estimatedCTP = UserDefaults.standard.value(forKey: "CurrentTakingPeriod") as? Date
+        let estimatedTTPD = UserDefaults.standard.value(forKey: "takingTimePerDay") as? String
+        
+        if let ftd = estimatedFTD, let ctp = estimatedCTP, let ttpd = estimatedTTPD {
+            self.setFirstTakingDate(ftd)
+            self.setCurrentTakingPeriod(ctp)
+            self.setTimePerDay(value: ttpd)
+            return true
+        } else {
+            return false
+        }
+        
     }
     
     class func setFirstTakingDate(_ date: Date) {
-        self.firstTakingDate = self.normalizeDate(date)
+        let normalizedDate = self.normalizeDate(date)
+        UserDefaults.standard.set(normalizedDate, forKey: "FirstTakingDate")
+        self.firstTakingDate = normalizedDate
     }
     
     class func setCurrentTakingPeriod(_ date: Date) {
+        let normalizedDate = self.normalizeDate(date)
+        UserDefaults.standard.set(normalizedDate, forKey: "CurrentTakingPeriod")
         self.currentTakingPeriod = self.normalizeDate(date)
     }
     
     class func setTimePerDay(value: String) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
-        self.takingTimePerDay = dateFormatter.date(from: value)
+        
+        let formattedTime = dateFormatter.date(from: value)
+        UserDefaults.standard.set(value, forKey: "takingTimePerDay")
+        self.takingTimePerDay = formattedTime
     }
     
     class func getTimePerDay() -> Date? {
-        let currentDate = Date()
-        var dateComponents = DateComponents()
-        dateComponents.year = Calendar.current.dateComponents([.year], from: currentDate).year
-        dateComponents.month = Calendar.current.dateComponents([.month], from: currentDate).month
-        dateComponents.day = Calendar.current.dateComponents([.day], from: currentDate).day
-        dateComponents.hour = Calendar.current.dateComponents([.hour], from: takingTimePerDay!).hour
-        dateComponents.minute = Calendar.current.dateComponents([.minute], from: takingTimePerDay!).minute
-        dateComponents.second = 0
         
-        /*var calender = Calendar.current
-         calender.locale = Locale(identifier: "de_DE")
-         
-         let componentsPillTime = (calender as NSCalendar).components([.hour, .minute, .second], from: Date())
-         if let pillTime = GlobalValues.takingTimePerDay {
-         let componentsPillTime = (calender as NSCalendar).components([.hour, .minute, .second], from: pillTime)
-         }
-         let componentsNowTime = (calender as NSCalendar).components([.year, .month, .day], from: Date())
-         
-         let formatter = DateFormatter()
-         formatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-         let dateTargetNSD = formatter.date(from: "\(componentsNowTime.year)-\(componentsNowTime.month)-\(componentsNowTime.day) \(componentsPillTime.hour):\(componentsPillTime.minute):00")
-         
-         return dateTargetNSD*/
-        return Calendar.current.date(from: dateComponents)
+        if let takingTimePD = self.takingTimePerDay {
+            let currentDate = Date()
+            var dateComponents = DateComponents()
+            dateComponents.year = Calendar.current.dateComponents([.year], from: currentDate).year
+            dateComponents.month = Calendar.current.dateComponents([.month], from: currentDate).month
+            dateComponents.day = Calendar.current.dateComponents([.day], from: currentDate).day
+            dateComponents.hour = Calendar.current.dateComponents([.hour], from: takingTimePD).hour
+            dateComponents.minute = Calendar.current.dateComponents([.minute], from: takingTimePD).minute
+            dateComponents.second = 0
+            
+            return Calendar.current.date(from: dateComponents)
+        } else {
+            return nil
+        }
     }
     
     class func normalizeDate(_ date: Date) -> Date {

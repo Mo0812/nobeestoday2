@@ -1,17 +1,19 @@
 //
-//  SettingsViewController.swift
+//  PreSettingsTTPDViewController.swift
 //  No Bees Today
 //
-//  Created by Moritz Kanzler on 24.05.17.
+//  Created by Moritz Kanzler on 26.05.17.
 //  Copyright © 2017 Moritz Kanzler. All rights reserved.
 //
 
 import UIKit
-import RealmSwift
-import Toast_Swift
 
-class SettingsViewController: UIViewController {
+class PreSettingsTTPDViewController: UIViewController {
 
+    @IBOutlet weak var ttpdDatePicker: UIDatePicker!
+    
+    var ttpd:String = "19:00:00"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,16 +25,16 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clearRealmStorage(_ sender: Any) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
-        self.view.makeToast("Alle Daten wurden gelöscht", duration: 2.0, position: .bottom)
-    }
 
-    @IBAction func showPreSettings(_ sender: Any) {
-        self.performSegue(withIdentifier: "showPreSettingsView", sender: self)
+    @IBAction func nextPreSetting(_ sender: Any) {
+        GlobalValues.setTimePerDay(value: self.ttpd)
+        self.performSegue(withIdentifier: "showFinishedView", sender: self)
+    }
+    
+    @IBAction func changedTTPD(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        self.ttpd = dateFormatter.string(from: self.ttpdDatePicker.date) + ":00"
     }
     /*
     // MARK: - Navigation

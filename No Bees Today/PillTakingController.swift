@@ -87,18 +87,22 @@ class PillTakingController: UIViewController {
             self.takenButton.isEnabled = true
             self.pillImage.image = UIImage(named: "timer")
             
-            let timeDiff = NSCalendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: GlobalValues.getTimePerDay()!)
-            
-            var pillTimerString = "\(abs(timeDiff.hour!)):\(abs(timeDiff.minute!)):\(abs(timeDiff.second!))"
-            if(timeDiff.hour! > 0 || timeDiff.minute! > 0 || timeDiff.second! > 0) {
-                self.pillTimer.textColor = UIColor.black
-                self.pillLabel.text = "Zeit bis zur Pilleneinnahme:"
+            if let timePerDay = GlobalValues.getTimePerDay() {
+                let timeDiff = NSCalendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: timePerDay)
+                var pillTimerString = "\(abs(timeDiff.hour!)):\(abs(timeDiff.minute!)):\(abs(timeDiff.second!))"
+                if(timeDiff.hour! > 0 || timeDiff.minute! > 0 || timeDiff.second! > 0) {
+                    self.pillTimer.textColor = UIColor.black
+                    self.pillLabel.text = "Zeit bis zur Pilleneinnahme:"
+                } else {
+                    self.pillTimer.textColor = UIColor.red
+                    self.pillLabel.text = "Du hast deine Pille noch nicht genommen:"
+                    pillTimerString = "- " + pillTimerString
+                }
+                self.pillTimer.text = pillTimerString
             } else {
-                self.pillTimer.textColor = UIColor.red
-                self.pillLabel.text = "Du hast deine Pille noch nicht genommen:"
-                pillTimerString = "- " + pillTimerString
-            }
-            self.pillTimer.text = pillTimerString
+                
+            }           
+            
         }
     }
     
