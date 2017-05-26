@@ -28,6 +28,7 @@ class PreSettingsTTPDViewController: UIViewController {
 
     @IBAction func nextPreSetting(_ sender: Any) {
         GlobalValues.setTimePerDay(value: self.ttpd)
+        LocalNotificationService.shared.registerDailyNotifications()
         self.performSegue(withIdentifier: "showFinishedView", sender: self)
     }
     

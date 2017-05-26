@@ -103,9 +103,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(c) by Moritz Kanzler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggz-ec-7ym">
-                                <rect key="frame" x="16" y="626" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© by Moritz Kanzler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggz-ec-7ym">
+                                <rect key="frame" x="16" y="632.5" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -130,6 +130,7 @@
                                 <state key="normal" title="Einstellungen öffnen"/>
                                 <connections>
                                     <action selector="showPreSettings:" destination="VJE-8m-Fph" eventType="touchUpInside" id="dqv-ed-5tH"/>
+                                    <segue destination="dFY-dD-nAu" kind="show" id="BRE-lC-KFi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,7 +169,7 @@
         <!--Pre SettingsFTD View Controller-->
         <scene sceneID="e8u-Gd-3H2">
             <objects>
-                <viewController storyboardIdentifier="PreSettingsView" id="z8t-sb-ytO" customClass="PreSettingsFTDViewController" customModule="No_Bees_Today" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z8t-sb-ytO" customClass="PreSettingsFTDViewController" customModule="No_Bees_Today" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q7Q-Mh-wR6"/>
                         <viewControllerLayoutGuide type="bottom" id="TDV-Yh-2u1"/>
@@ -183,7 +184,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-gz-fNV">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-gz-fNV">
                                 <rect key="frame" x="24" y="60" width="327" height="2.5"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aN-ud-gEU">
@@ -239,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0w-Pm-M1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162.40000000000001" y="234.33283358320841"/>
+            <point key="canvasLocation" x="526" y="257"/>
         </scene>
         <!--Pill Calendar Controller-->
         <scene sceneID="HwM-Jm-7ju">
@@ -342,7 +343,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="SwE-b5-7BV">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="SwE-b5-7BV">
                                 <rect key="frame" x="24" y="60" width="327" height="2.5"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQh-eM-BKd">
@@ -398,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQA-G9-fv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="234"/>
+            <point key="canvasLocation" x="1193" y="257"/>
         </scene>
         <!--Pre Settings Finished View Controller-->
         <scene sceneID="w3h-YU-676">
@@ -459,7 +460,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIy-rN-LpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1193" y="234"/>
+            <point key="canvasLocation" x="1873" y="257"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UOj-Gf-0gO">
+            <objects>
+                <viewController storyboardIdentifier="PreSettingsView" id="dFY-dD-nAu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="URC-eZ-G5a"/>
+                        <viewControllerLayoutGuide type="bottom" id="3G1-t5-iqU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bG-Dl-ghY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einrichtung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6B-3a-gLe">
+                                <rect key="frame" x="24" y="81.5" width="327" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="erD-lU-pxB">
+                                <rect key="frame" x="24" y="60" width="327" height="2.5"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diese App erinnert dich an die Einnahme deiner Pille." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-xl-z8t">
+                                <rect key="frame" x="24" y="135" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XpL-4I-hUc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wh-ff-pmg">
+                                <rect key="frame" x="24" y="205" width="327" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="t39-8L-h3H"/>
+                                </constraints>
+                                <string key="text">Zunächst musst du allerdings angeben, wann du mit das letzte mal einen Pillenzyklus angefangen hast und um wie viel Uhr du für gewöhnlich deine Pille einnimmst.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUP-zo-fOh">
+                                <rect key="frame" x="24" y="355" width="327" height="39"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Weiter"/>
+                                <connections>
+                                    <segue destination="z8t-sb-ytO" kind="presentation" modalTransitionStyle="crossDissolve" id="8gg-eO-lDp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d6B-3a-gLe" firstAttribute="leading" secondItem="8bG-Dl-ghY" secondAttribute="leadingMargin" constant="8" id="0em-5S-osa"/>
+                            <constraint firstItem="erD-lU-pxB" firstAttribute="leading" secondItem="8bG-Dl-ghY" secondAttribute="leadingMargin" constant="8" id="56C-kr-RfO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AUP-zo-fOh" secondAttribute="trailing" constant="8" id="5by-ZG-xRk"/>
+                            <constraint firstItem="erD-lU-pxB" firstAttribute="top" secondItem="URC-eZ-G5a" secondAttribute="bottom" constant="40" id="B6b-CR-Ktf"/>
+                            <constraint firstItem="3Wh-ff-pmg" firstAttribute="leading" secondItem="8bG-Dl-ghY" secondAttribute="leadingMargin" constant="8" id="P3L-mx-8xS"/>
+                            <constraint firstItem="d6B-3a-gLe" firstAttribute="top" secondItem="erD-lU-pxB" secondAttribute="bottom" constant="20" id="TF3-1e-oDr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x2y-xl-z8t" secondAttribute="trailing" constant="8" id="WWz-Lk-osW"/>
+                            <constraint firstItem="AUP-zo-fOh" firstAttribute="leading" secondItem="8bG-Dl-ghY" secondAttribute="leadingMargin" constant="8" id="Xus-sD-8g3"/>
+                            <constraint firstItem="3Wh-ff-pmg" firstAttribute="top" secondItem="x2y-xl-z8t" secondAttribute="bottom" constant="20" id="b4F-k9-lDX"/>
+                            <constraint firstItem="AUP-zo-fOh" firstAttribute="top" secondItem="3Wh-ff-pmg" secondAttribute="bottom" constant="40" id="dMh-ei-BXc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d6B-3a-gLe" secondAttribute="trailing" constant="8" id="dTe-dx-tGz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Wh-ff-pmg" secondAttribute="trailing" constant="8" id="efY-di-bW6"/>
+                            <constraint firstItem="x2y-xl-z8t" firstAttribute="top" secondItem="d6B-3a-gLe" secondAttribute="bottom" constant="20" id="tos-ix-Kvb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="erD-lU-pxB" secondAttribute="trailing" constant="8" id="ye3-Q5-JHr"/>
+                            <constraint firstItem="x2y-xl-z8t" firstAttribute="leading" secondItem="8bG-Dl-ghY" secondAttribute="leadingMargin" constant="8" id="zXJ-1F-9hy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFe-TE-tKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162.40000000000001" y="256.82158920539734"/>
         </scene>
     </scenes>
     <resources>

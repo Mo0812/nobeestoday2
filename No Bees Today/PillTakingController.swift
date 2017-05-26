@@ -18,7 +18,6 @@ class PillTakingController: UIViewController {
     let formatter = DateFormatter()
     var dateTarget: TimeInterval = 0.0
     var timer: Timer?
-    var currentPillDay: PillDay?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,16 +46,8 @@ class PillTakingController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updatePDFromStorage() {
-        if let currentPeriod = GlobalValues.currentTakingPeriod {
-            let pc = PillCycle(startDate: currentPeriod)
-            self.currentPillDay = pc.getCurrentPillDay()
-        }
-    }
-    
     func updateTimeDiff() {
-        self.updatePDFromStorage()
-        if let currentPD = self.currentPillDay {
+        if let currentPD = GlobalValues.getCurrentPillDayFromStorage() {
             // Auswertung des Pillenstatus
             if self.timer != nil {
                 self.timer!.invalidate()
@@ -68,14 +59,17 @@ class PillTakingController: UIViewController {
             switch(state) {
                 case .pillTaken:
                     self.pillImage.image = UIImage(named: "pill-taken")
+                    self.pillTimer.textColor = UIColor.black
                     self.pillLabel.text = "Du hast die Pille eingenommen"
                     self.pillTimer.text = "Super!"
                 case .pillBlood:
                     self.pillImage.image = UIImage(named: "blood")
+                    self.pillTimer.textColor = UIColor.black
                     self.pillLabel.text = "Heute ist keine Pille nötig"
                     self.pillTimer.text = ""
                 case .pillForgotten:
                     self.pillImage.image = UIImage(named: "pill-forgotten")
+                    self.pillTimer.textColor = UIColor.red
                     self.pillLabel.text = "Du hast deine Pille vergessen"
                     self.pillTimer.text = "Denk dran!"
                 default:
@@ -109,7 +103,7 @@ class PillTakingController: UIViewController {
     @IBAction func pillTaken(_ sender: AnyObject) {
         /*GlobalValues.takingPlan?.addDay(Date(), state: PillDay.PillDayState.pillTaken)
         NotificationService.cancelStressNotificationsOnForgotten()*/
-        if let currentPD = self.currentPillDay {
+        if let currentPD = GlobalValues.getCurrentPillDayFromStorage() {
             currentPD.updateState(state: .pillTaken, result: {
                 success in
                 if(success) {

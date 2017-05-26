@@ -40,13 +40,15 @@ class PillDay: Object {
         let pd = realm.objects(PillDay.self).filter("day = %@", self.day).first
         
         if let pd = pd {
-            do {
-                try! realm.write {
-                    pd.state = state.rawValue
+            if pd.state != 1 {
+                do {
+                    try! realm.write {
+                        pd.state = state.rawValue
+                    }
+                    result(true)
+                } catch {
+                    result(false)
                 }
-                result(true)
-            } catch {
-                result(false)
             }
         } else {
             do {

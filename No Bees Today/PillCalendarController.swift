@@ -130,7 +130,10 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
     // MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.showActionSheet(controlledPillDay: self.pillCycleArr[indexPath.row])
+        let selectedItem = self.pillCycleArr[indexPath.row]
+        if selectedItem.state != PillDay.PillDayState.pillBlood.rawValue {
+            self.showActionSheet(controlledPillDay: self.pillCycleArr[indexPath.row])
+        }
     }
 
     /*

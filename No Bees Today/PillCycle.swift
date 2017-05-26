@@ -31,7 +31,7 @@ class PillCycle {
             if let currentPillDay = self.getPillDay(from: currentDay) {
                 self.cycle.append(currentPillDay)
             } else {
-                if (20...27).contains(day) {
+                if (21...27).contains(day) {
                     let pd = PillDay(day: currentDay, state: PillDay.PillDayState.pillBlood)
                     self.cycle.append(pd)
                     try! self.realm.write {

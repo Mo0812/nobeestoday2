@@ -32,7 +32,6 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func showPreSettings(_ sender: Any) {
-        self.performSegue(withIdentifier: "showPreSettingsView", sender: self)
     }
     /*
     // MARK: - Navigation

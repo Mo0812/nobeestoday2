@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5796F6F1ED5D3370006601D /* SettingsViewController.swift */; };
+		C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */; };
 		C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */; };
 		C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */; };
 		C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */; };
@@ -30,6 +31,7 @@
 		1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_No_Bees_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64E6E284D6925C5723C588 /* Pods-No Bees Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C5796F6F1ED5D3370006601D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
 		C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFTDViewController.swift; sourceTree = "<group>"; };
 		C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFinishedViewController.swift; sourceTree = "<group>"; };
 		C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsTTPDViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				C5F263F41ED0F5C1002DBF5A /* NotificationService.swift */,
 				C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */,
+				C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				C5F263F51ED0F5C1002DBF5A /* NotificationService.swift in Sources */,
 				C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */,
 				C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */,
+				C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */,
 				C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */,
 				C5F263F71ED0F7FB002DBF5A /* GlobalValues.swift in Sources */,
 				C5F264001ED0FC4C002DBF5A /* PillDay.swift in Sources */,

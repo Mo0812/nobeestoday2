@@ -15,9 +15,6 @@ class GlobalValues {
     static private var takingTimePerDay: Date?
     
     class func initDates() -> Bool {
-        /*self.setFirstTakingDate(Date())
-        self.setCurrentTakingPeriod(Date())
-        self.setTimePerDay(value: "19:30:00")*/
         
         let estimatedFTD = UserDefaults.standard.value(forKey: "FirstTakingDate") as? Date
         let estimatedCTP = UserDefaults.standard.value(forKey: "CurrentTakingPeriod") as? Date
@@ -78,6 +75,24 @@ class GlobalValues {
         let components = calendar.dateComponents([.year, .month, .day], from: date)
         let rightDate = calendar.date(from: components)
         return rightDate!
+    }
+    
+    class func getCurrentPillDayFromStorage() -> PillDay? {
+        if let currentPeriod = GlobalValues.currentTakingPeriod {
+            let pc = PillCycle(startDate: currentPeriod)
+            return pc.getCurrentPillDay()
+        } else {
+            return nil
+        }
+    }
+    
+    class func updateCurrentTakingPeriodOnCycleChange() {
+        if let ctp = self.currentTakingPeriod {
+            let swapDate = ctp.addingTimeInterval(60 * 60 * 24 * 28)
+            if swapDate < Date() {
+                self.setCurrentTakingPeriod(swapDate)
+            }
+        }
     }
 
 }

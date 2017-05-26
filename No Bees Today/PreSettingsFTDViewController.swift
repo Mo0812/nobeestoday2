@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PreSettingsFTDViewController: UIViewController {
     
     @IBOutlet weak var ftdDatePicker: UIDatePicker!
     
     var ftd = Date()
+    var changedGivenDate = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let oldFTD = GlobalValues.firstTakingDate {
+            self.ftd = oldFTD
+            self.ftdDatePicker.setDate(oldFTD, animated: false)
+            self.changedGivenDate = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,14 +33,46 @@ class PreSettingsFTDViewController: UIViewController {
     }
     
     @IBAction func nextPreSetting(_ sender: Any) {
-        GlobalValues.setFirstTakingDate(self.ftd)
-        GlobalValues.setCurrentTakingPeriod(self.ftd)
-        self.performSegue(withIdentifier: "showTTPDView", sender: self)
+        if self.changedGivenDate {
+            let alert = UIAlertController(title: "Änderung des Zyklusdatums", message: "Wenn du das Zyklumdatum änderst, gehen alle bisherigen Daten verlorden", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Abbrechen", style: UIAlertActionStyle.default, handler: {
+                action in
+                self.setInGivenDate()
+            }))
+            alert.addAction(UIAlertAction(title: "Löschen", style: UIAlertActionStyle.cancel, handler: {
+                action in
+                self.changeCycleDate(clearAll: true)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            self.changeCycleDate(clearAll: false)
+        }
     }
 
     @IBAction func changedFTD(_ sender: Any) {
         self.ftd = self.ftdDatePicker.date
     }
+    
+    func changeCycleDate(clearAll: Bool) {
+        if clearAll {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.deleteAll()
+            }
+        }
+        GlobalValues.setFirstTakingDate(self.ftd)
+        GlobalValues.setCurrentTakingPeriod(self.ftd)
+        self.performSegue(withIdentifier: "showTTPDView", sender: self)
+    }
+    
+    func setInGivenDate() {
+        if let oldFTD = GlobalValues.firstTakingDate {
+            self.ftd = oldFTD
+            self.ftdDatePicker.setDate(oldFTD, animated: false)
+            self.changedGivenDate = true
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
