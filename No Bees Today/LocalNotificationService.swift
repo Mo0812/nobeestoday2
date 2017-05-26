@@ -55,20 +55,48 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         let identifier = "NBTDailyNotification"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
-        center.removePendingNotificationRequests(withIdentifiers: ["NBTDailyNotification"])
+        center.removePendingNotificationRequests(withIdentifiers: ["NBTDailyNotification", "NBTStressNotification"])
         center.add(request, withCompletionHandler: { (error) in
             if let error = error {
                 // Something went wrong
             }
         })
+        
+        self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
     }
     
-    private func registerStressNotifications() {
+    private func registerStressNotifications(forDate: Date) {
+        self.generateStressNotification(identifierSuffix: "1", forDate: forDate.addingTimeInterval(60 * 2), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+        self.generateStressNotification(identifierSuffix: "2", forDate: forDate.addingTimeInterval(60 * 5), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+        self.generateStressNotification(identifierSuffix: "3", forDate: forDate.addingTimeInterval(60 * 60), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+
+    }
+    
+    private func generateStressNotification(identifierSuffix: String, forDate: Date, title: String, body: String) {
+        let identifier = "NBTStressNotification" + identifierSuffix
+        
+        let content = UNMutableNotificationContent()
+        content.categoryIdentifier = "NBTDailyNotificationCategory"
+        content.title = title
+        content.body = body
+        content.sound = UNNotificationSound.default()
+        
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: forDate)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                // Something went wrong
+            }
+        })
         
     }
     
     private func cancelStressNotifications() {
-        
+        center.removePendingNotificationRequests(withIdentifiers: ["NBTStressNotification1", "NBTStressNotification2", "NBTStressNotification3"])
+        self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!.addingTimeInterval(60 * 60 * 24))
     }
     
     /** MARK: UNUserNotificationCenterDelegate **/

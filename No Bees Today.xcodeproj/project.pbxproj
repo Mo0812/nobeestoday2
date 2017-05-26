@@ -18,7 +18,6 @@
 		C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E31ED0EB21002DBF5A /* Main.storyboard */; };
 		C5F263E71ED0EB21002DBF5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E61ED0EB21002DBF5A /* Assets.xcassets */; };
 		C5F263EA1ED0EB21002DBF5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E81ED0EB21002DBF5A /* LaunchScreen.storyboard */; };
-		C5F263F51ED0F5C1002DBF5A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263F41ED0F5C1002DBF5A /* NotificationService.swift */; };
 		C5F263F71ED0F7FB002DBF5A /* GlobalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */; };
 		C5F263FB1ED0FA24002DBF5A /* PillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263FA1ED0FA24002DBF5A /* PillCell.swift */; };
 		C5F263FD1ED0FB86002DBF5A /* PillCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263FC1ED0FB86002DBF5A /* PillCalendarController.swift */; };
@@ -44,7 +43,6 @@
 		C5F263E61ED0EB21002DBF5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5F263E91ED0EB21002DBF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5F263EB1ED0EB21002DBF5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5F263F41ED0F5C1002DBF5A /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalValues.swift; sourceTree = "<group>"; };
 		C5F263FA1ED0FA24002DBF5A /* PillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillCell.swift; sourceTree = "<group>"; };
 		C5F263FC1ED0FB86002DBF5A /* PillCalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillCalendarController.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 		C5F263F31ED0F5A2002DBF5A /* Globals */ = {
 			isa = PBXGroup;
 			children = (
-				C5F263F41ED0F5C1002DBF5A /* NotificationService.swift */,
 				C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */,
 				C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */,
 			);
@@ -318,7 +315,6 @@
 				C5F263FD1ED0FB86002DBF5A /* PillCalendarController.swift in Sources */,
 				C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */,
 				C5F264021ED1021E002DBF5A /* PillCycle.swift in Sources */,
-				C5F263F51ED0F5C1002DBF5A /* NotificationService.swift in Sources */,
 				C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */,
 				C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */,
 				C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */,
