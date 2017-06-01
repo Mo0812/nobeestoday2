@@ -14,11 +14,13 @@ class PillCycle {
     var cycle: [PillDay]
     let startDate: Date
     let realm: Realm
+    private var bloodCycle: [PillDay]
     
     init(startDate: Date) {
         self.startDate = GlobalValues.normalizeDate(startDate)
         self.cycle = [PillDay]()
         self.realm = try! Realm()
+        self.bloodCycle = [PillDay]()
         
         self.createCycle()
     }
@@ -30,10 +32,16 @@ class PillCycle {
         for day in 0..<28 {
             if let currentPillDay = self.getPillDay(from: currentDay) {
                 self.cycle.append(currentPillDay)
+                if currentPillDay.state == PillDay.PillDayState.pillBlood.rawValue {
+                    self.bloodCycle.append(currentPillDay)
+                }
             } else {
                 if (21...27).contains(day) {
                     let pd = PillDay(day: currentDay, state: PillDay.PillDayState.pillBlood)
+                    
+                    self.bloodCycle.append(pd)
                     self.cycle.append(pd)
+                    
                     try! self.realm.write {
                         self.realm.add(pd)
                     }
@@ -53,6 +61,18 @@ class PillCycle {
     
     public func getCurrentPillDay() -> PillDay? {
         return self.getPillDay(from: GlobalValues.normalizeDate(Date()))
+    }
+    
+    public func isInBloodTime(pd: PillDay) -> Bool {
+        if self.bloodCycle.contains(pd) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    public func getLastBloodDay() -> PillDay? {
+        return self.bloodCycle.last
     }
     
 }

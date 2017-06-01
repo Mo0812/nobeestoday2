@@ -13,6 +13,8 @@
 		C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */; };
 		C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */; };
 		C5C2DCDD1ED3866A00E5B523 /* PillTakingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2DCDC1ED3866A00E5B523 /* PillTakingController.swift */; };
+		C5DADF2D1EDB3906005F0A3A /* NavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5DADF2C1EDB3906005F0A3A /* NavView.xib */; };
+		C5DADF2F1EDB397E005F0A3A /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DADF2E1EDB397E005F0A3A /* NavView.swift */; };
 		C5F263E01ED0EB21002DBF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263DF1ED0EB21002DBF5A /* AppDelegate.swift */; };
 		C5F263E21ED0EB21002DBF5A /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263E11ED0EB21002DBF5A /* MainPageViewController.swift */; };
 		C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E31ED0EB21002DBF5A /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsTTPDViewController.swift; sourceTree = "<group>"; };
 		C5AFC4E21ED87A3C0004C6D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C5C2DCDC1ED3866A00E5B523 /* PillTakingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillTakingController.swift; sourceTree = "<group>"; };
+		C5DADF2C1EDB3906005F0A3A /* NavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavView.xib; sourceTree = "<group>"; };
+		C5DADF2E1EDB397E005F0A3A /* NavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		C5F263DC1ED0EB21002DBF5A /* No Bees Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No Bees Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F263DF1ED0EB21002DBF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F263E11ED0EB21002DBF5A /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 			name = PillTaking;
 			sourceTree = "<group>";
 		};
+		C5DADF291EDB389A005F0A3A /* NavView */ = {
+			isa = PBXGroup;
+			children = (
+				C5DADF2C1EDB3906005F0A3A /* NavView.xib */,
+				C5DADF2E1EDB397E005F0A3A /* NavView.swift */,
+			);
+			name = NavView;
+			sourceTree = "<group>";
+		};
 		C5F263D31ED0EB21002DBF5A = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 		C5F263F81ED0FA02002DBF5A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5DADF291EDB389A005F0A3A /* NavView */,
 				C5AFC4DA1ED863500004C6D8 /* PreSettings */,
 				C5C2DCDE1ED3876400E5B523 /* PillTaking */,
 				C5F263F91ED0FA07002DBF5A /* PillCalendar */,
@@ -249,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5DADF2D1EDB3906005F0A3A /* NavView.xib in Resources */,
 				C5F263EA1ED0EB21002DBF5A /* LaunchScreen.storyboard in Resources */,
 				C5F263E71ED0EB21002DBF5A /* Assets.xcassets in Resources */,
 				C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */,
@@ -316,6 +331,7 @@
 				C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */,
 				C5F264021ED1021E002DBF5A /* PillCycle.swift in Sources */,
 				C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */,
+				C5DADF2F1EDB397E005F0A3A /* NavView.swift in Sources */,
 				C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */,
 				C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */,
 				C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */,

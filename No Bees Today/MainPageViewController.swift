@@ -24,9 +24,15 @@ class MainPageViewController: UIPageViewController {
         super.viewDidLoad()
         
         dataSource = self
+        delegate = self
         
         setViewControllers([orderedViewControllers[1]], direction: .forward, animated: false, completion: nil)
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,7 +57,7 @@ class MainPageViewController: UIPageViewController {
     
 }
 
-extension MainPageViewController: UIPageViewControllerDataSource {
+extension MainPageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
@@ -85,5 +91,10 @@ extension MainPageViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        //print("Changed")
+    }
+    
 }
 

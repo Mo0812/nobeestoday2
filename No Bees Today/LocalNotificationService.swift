@@ -11,6 +11,7 @@ import UserNotifications
 
 class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     
+    static let tomorrow: TimeInterval = 60 * 60 * 24
     static let shared = LocalNotificationService()
     private var center: UNUserNotificationCenter
     
@@ -42,32 +43,38 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         self.center.delegate = self
     }
     
-    public func registerDailyNotifications() {
+    public func registerDailyNotifications(forDate: Date) {
+        
         let content = UNMutableNotificationContent()
         content.categoryIdentifier = "NBTDailyNotificationCategory"
         content.title = "Pille nehmen"
         content.body = "Es ist Zeit deine Pille zu nehmen"
         content.sound = UNNotificationSound.default()
         
-        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: GlobalValues.getTimePerDay()!)
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: forDate)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
         
         let identifier = "NBTDailyNotification"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
-        center.removePendingNotificationRequests(withIdentifiers: ["NBTDailyNotification", "NBTStressNotification"])
-        center.add(request, withCompletionHandler: { (error) in
+        self.center.removeAllDeliveredNotifications()
+        self.center.removeAllPendingNotificationRequests()
+        self.center.add(request, withCompletionHandler: { (error) in
             if let error = error {
                 // Something went wrong
             }
         })
         
-        self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
+        
+    }
+    
+    private func removeStressNotifications() {
+        self.center.removePendingNotificationRequests(withIdentifiers: ["NBTStressNotification1", "NBTStressNotification2", "NBTStressNotification3"])
     }
     
     private func registerStressNotifications(forDate: Date) {
-        self.generateStressNotification(identifierSuffix: "1", forDate: forDate.addingTimeInterval(60 * 2), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
-        self.generateStressNotification(identifierSuffix: "2", forDate: forDate.addingTimeInterval(60 * 5), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+        self.generateStressNotification(identifierSuffix: "1", forDate: forDate.addingTimeInterval(60 * 0.5), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+        self.generateStressNotification(identifierSuffix: "2", forDate: forDate.addingTimeInterval(60 * 1), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
         self.generateStressNotification(identifierSuffix: "3", forDate: forDate.addingTimeInterval(60 * 60), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
 
     }
@@ -82,21 +89,16 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         content.sound = UNNotificationSound.default()
         
         let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: forDate)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         center.add(request, withCompletionHandler: { (error) in
             if let error = error {
                 // Something went wrong
+                print("Error in Stress Notifications")
             }
         })
-        
-    }
-    
-    private func cancelStressNotifications() {
-        center.removePendingNotificationRequests(withIdentifiers: ["NBTStressNotification1", "NBTStressNotification2", "NBTStressNotification3"])
-        self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!.addingTimeInterval(60 * 60 * 24))
     }
     
     /** MARK: UNUserNotificationCenterDelegate **/
@@ -104,11 +106,15 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> ()) {
         // Play sound and show alert to the user
         completionHandler([.alert,.sound])
+        if notification.request.identifier == "NBTDailyNotification" {
+            self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
+        }
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> ()) {
         
         // Determine the user action
+        GlobalValues.updateCurrentTakingPeriodOnCycleChange()
         switch response.actionIdentifier {
             case UNNotificationDismissActionIdentifier:
                 print("Dismiss Action")
@@ -125,18 +131,23 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     }
     
     func pillTakenAction() {
+        self.pillTakenAction(completionHandler: {})
+    }
+    
+    func pillTakenAction(completionHandler: @escaping () -> ()) {
         print("Genommen")
-        self.cancelStressNotifications()
+        self.removeStressNotifications()
         if let pd = GlobalValues.getCurrentPillDayFromStorage() {
             pd.updateState(state: .pillTaken, result: {
                 success in
-                
+                completionHandler()
             })
         } else {
             let pd = PillDay(day: GlobalValues.normalizeDate(Date()), state: .pillTaken)
             pd.updateState(result: {
                 success in
                 if success {
+                    completionHandler()
                 }
             })
         }

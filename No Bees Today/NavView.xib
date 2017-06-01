@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavView" customModule="No_Bees_Today" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-kA-Vzd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EEN-KB-JHS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCt-I1-WaK">
+                                <rect key="frame" x="56" y="22" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z08-Hg-Ql1">
+                                <rect key="frame" x="164" y="22" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyj-rc-Y7J">
+                                <rect key="frame" x="277" y="22" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Z08-Hg-Ql1" firstAttribute="leading" secondItem="YCt-I1-WaK" secondAttribute="trailing" constant="62" id="M53-dV-1gn"/>
+                            <constraint firstItem="Z08-Hg-Ql1" firstAttribute="baseline" secondItem="Yyj-rc-Y7J" secondAttribute="baseline" id="NGQ-um-rEw"/>
+                            <constraint firstItem="Z08-Hg-Ql1" firstAttribute="centerX" secondItem="EEN-KB-JHS" secondAttribute="centerX" id="W3R-8x-IMT"/>
+                            <constraint firstItem="YCt-I1-WaK" firstAttribute="top" secondItem="EEN-KB-JHS" secondAttribute="top" constant="22" id="l2W-2Q-6Gu"/>
+                            <constraint firstItem="YCt-I1-WaK" firstAttribute="baseline" secondItem="Z08-Hg-Ql1" secondAttribute="baseline" id="uWS-2U-aPp"/>
+                            <constraint firstItem="Yyj-rc-Y7J" firstAttribute="leading" secondItem="Z08-Hg-Ql1" secondAttribute="trailing" constant="67" id="x2T-jy-JhV"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" red="0.57877761719999998" green="0.82989551510000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QwM-kA-Vzd" secondAttribute="trailing" id="a6V-HV-DXg"/>
+                <constraint firstItem="QwM-kA-Vzd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dE9-HM-9nE"/>
+                <constraint firstItem="QwM-kA-Vzd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jdW-9y-cKB"/>
+                <constraint firstAttribute="bottom" secondItem="QwM-kA-Vzd" secondAttribute="bottom" id="pVV-UW-QzQ"/>
+            </constraints>
+            <connections>
+                <outlet property="visualContainer" destination="QwM-kA-Vzd" id="TSi-cv-xvQ"/>
+            </connections>
+            <point key="canvasLocation" x="38.5" y="38.5"/>
+        </view>
+    </objects>
+</document>

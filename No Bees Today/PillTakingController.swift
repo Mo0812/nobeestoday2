@@ -101,24 +101,9 @@ class PillTakingController: UIViewController {
     }
     
     @IBAction func pillTaken(_ sender: AnyObject) {
-        /*GlobalValues.takingPlan?.addDay(Date(), state: PillDay.PillDayState.pillTaken)
-        NotificationService.cancelStressNotificationsOnForgotten()*/
-        if let currentPD = GlobalValues.getCurrentPillDayFromStorage() {
-            currentPD.updateState(state: .pillTaken, result: {
-                success in
-                if(success) {
-                    self.updateTimeDiff()
-                }
-            })
-        } else {
-            let pd = PillDay(day: GlobalValues.normalizeDate(Date()), state: .pillTaken)
-            pd.updateState(result: {
-                success in
-                if(success) {
-                    self.updateTimeDiff()
-                }
-            })
-        }
+        LocalNotificationService.shared.pillTakenAction(completionHandler: {
+            self.updateTimeDiff()
+        })
     }
 
     
