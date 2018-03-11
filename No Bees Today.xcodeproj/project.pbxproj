@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5796F6F1ED5D3370006601D /* SettingsViewController.swift */; };
 		C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */; };
+		C58E29042055F69700105FAD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C58E29022055F69700105FAD /* .gitignore */; };
+		C58E29052055F69700105FAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C58E29032055F69700105FAD /* README.md */; };
 		C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */; };
 		C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */; };
 		C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */; };
@@ -33,6 +35,8 @@
 		AE64E6E284D6925C5723C588 /* Pods-No Bees Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C5796F6F1ED5D3370006601D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
+		C58E29022055F69700105FAD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		C58E29032055F69700105FAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFTDViewController.swift; sourceTree = "<group>"; };
 		C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFinishedViewController.swift; sourceTree = "<group>"; };
 		C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsTTPDViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				C5F263E61ED0EB21002DBF5A /* Assets.xcassets */,
+				C58E29022055F69700105FAD /* .gitignore */,
+				C58E29032055F69700105FAD /* README.md */,
 				C5F263EB1ED0EB21002DBF5A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -263,6 +269,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58E29052055F69700105FAD /* README.md in Resources */,
+				C58E29042055F69700105FAD /* .gitignore in Resources */,
 				C5DADF2D1EDB3906005F0A3A /* NavView.xib in Resources */,
 				C5F263EA1ED0EB21002DBF5A /* LaunchScreen.storyboard in Resources */,
 				C5F263E71ED0EB21002DBF5A /* Assets.xcassets in Resources */,

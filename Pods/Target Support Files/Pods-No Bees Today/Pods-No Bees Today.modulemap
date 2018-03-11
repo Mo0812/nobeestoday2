@@ -1,0 +1,6 @@
+framework module Pods_No_Bees_Today {
+  umbrella header "Pods-No Bees Today-umbrella.h"
+
+  export *
+  module * { export * }
+}
