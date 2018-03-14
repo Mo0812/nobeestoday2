@@ -46,7 +46,7 @@ class PillTakingController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateTimeDiff() {
+    @objc func updateTimeDiff() {
         if let currentPD = GlobalValues.getCurrentPillDayFromStorage() {
             // Auswertung des Pillenstatus
             if self.timer != nil {

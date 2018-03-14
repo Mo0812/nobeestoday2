@@ -18,8 +18,8 @@ class PillDay: Object {
         case pillNotYetTaken = 3
     }
     
-    dynamic var day: Date = Date()
-    dynamic var state: Int = 0
+    @objc dynamic var day: Date = Date()
+    @objc dynamic var state: Int = 0
     
     convenience public init(day: Date, state: PillDayState) {
         self.init()
