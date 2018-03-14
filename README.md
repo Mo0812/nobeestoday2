@@ -2,7 +2,7 @@
 
 **No Bees Today** is an app for people who use birth control pills. The app reminds the user to take their pills at an adjusted time and keeps calling them to take the pill until they made it.
 
-Also **No Bees Today** runs totally offline and saves all the user data into a local storage at the specific phone. No cloud or anything to match.
+Also **No Bees Today** runs totally offline and saves all the user data into a local storage at the specific phone. No cloud storage or any connection to a server is used. In my opinion it's important to have access to apps in the medical sector which **not** give away your medical data to any kind of service or device you are not owning.
 
 ## Status
 
@@ -10,4 +10,10 @@ This project is still in a early pre-beta stage. Neither the design nor the usab
 
 ## Roadmap
 
-More details coming soon.
+Take a look at the [issue](https://github.com/Mo0812/nobeestoday2/issues) settings!
+
+## Used frameworks
+
+The following frameworks are being used in this ab:
+* [RealmSwift](https://github.com/realm/realm-cocoa/tree/master/RealmSwift)
+* [Toast-Swift](https://github.com/scalessec/Toast-Swift)
