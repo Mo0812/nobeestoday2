@@ -41,25 +41,17 @@ class PillDay: Object {
         
         if let pd = pd {
             if pd.state != 1 {
-                do {
-                    try! realm.write {
-                        pd.state = state.rawValue
-                    }
-                    result(true)
-                } catch {
-                    result(false)
-                }
-            }
-        } else {
-            do {
                 try! realm.write {
-                    self.state = state.rawValue
-                    realm.add(self)
+                    pd.state = state.rawValue
                 }
                 result(true)
-            } catch {
-                result(false)
             }
+        } else {
+            try! realm.write {
+                self.state = state.rawValue
+                realm.add(self)
+            }
+            result(true)
         }
     }
 }

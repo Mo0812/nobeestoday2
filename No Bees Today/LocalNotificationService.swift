@@ -60,7 +60,7 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         self.center.removeAllDeliveredNotifications()
         self.center.removeAllPendingNotificationRequests()
         self.center.add(request, withCompletionHandler: { (error) in
-            if let error = error {
+            if error != nil {
                 // Something went wrong
             }
         })
@@ -94,7 +94,7 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         center.add(request, withCompletionHandler: { (error) in
-            if let error = error {
+            if error != nil {
                 // Something went wrong
                 print("Error in Stress Notifications")
             }

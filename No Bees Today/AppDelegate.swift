@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //NotificationService.sharedInstance.initNotificationService()
-        LocalNotificationService.shared
+        let _ = LocalNotificationService.shared
         
         let initSuccess = GlobalValues.initDates()
         if !initSuccess {
