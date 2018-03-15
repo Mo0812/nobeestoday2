@@ -40,7 +40,7 @@ class PillDay: Object {
         let pd = realm.objects(PillDay.self).filter("day = %@", self.day).first
         
         if let pd = pd {
-            if pd.state != 1 {
+            if pd.state != PillDayState.pillBlood.rawValue {
                 try! realm.write {
                     pd.state = state.rawValue
                 }

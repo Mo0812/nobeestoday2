@@ -137,7 +137,7 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     func pillTakenAction(completionHandler: @escaping () -> ()) {
         print("Genommen")
         self.removeStressNotifications()
-        self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
+        //self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
         if let pd = GlobalValues.getCurrentPillDayFromStorage() {
             pd.updateState(state: .pillTaken, result: {
                 success in
