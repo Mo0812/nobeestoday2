@@ -27,6 +27,7 @@
 		C5F263FD1ED0FB86002DBF5A /* PillCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263FC1ED0FB86002DBF5A /* PillCalendarController.swift */; };
 		C5F264001ED0FC4C002DBF5A /* PillDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263FF1ED0FC4C002DBF5A /* PillDay.swift */; };
 		C5F264021ED1021E002DBF5A /* PillCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F264011ED1021E002DBF5A /* PillCycle.swift */; };
+		C5FF9335205B21F000B22B0B /* ImpactGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF9334205B21F000B22B0B /* ImpactGenerator.swift */; };
 		F2B8F4B0E1CDBEE25C7C4E04 /* Pods_No_Bees_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		C5F263FC1ED0FB86002DBF5A /* PillCalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillCalendarController.swift; sourceTree = "<group>"; };
 		C5F263FF1ED0FC4C002DBF5A /* PillDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillDay.swift; sourceTree = "<group>"; };
 		C5F264011ED1021E002DBF5A /* PillCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillCycle.swift; sourceTree = "<group>"; };
+		C5FF9334205B21F000B22B0B /* ImpactGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactGenerator.swift; sourceTree = "<group>"; };
 		D19E3C047BF19774457B3C01 /* Pods-No Bees Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +174,7 @@
 			children = (
 				C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */,
 				C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */,
+				C5FF9334205B21F000B22B0B /* ImpactGenerator.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F263E21ED0EB21002DBF5A /* MainPageViewController.swift in Sources */,
+				C5FF9335205B21F000B22B0B /* ImpactGenerator.swift in Sources */,
 				C5F263FB1ED0FA24002DBF5A /* PillCell.swift in Sources */,
 				C5F263FD1ED0FB86002DBF5A /* PillCalendarController.swift in Sources */,
 				C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */,

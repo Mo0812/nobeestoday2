@@ -11,6 +11,7 @@ import UIKit
 class PillCalendarController: UIViewController {
     
     var pillCycleArr: [PillDay] = [PillDay]()
+    var impactGenerator: ImpactGenerator?
     
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -25,6 +26,7 @@ class PillCalendarController: UIViewController {
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        self.impactGenerator = ImpactGenerator(view: self.view)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,11 +50,13 @@ class PillCalendarController: UIViewController {
     
     func showActionSheet(controlledPillDay: PillDay) {
         let actionSheetController = UIAlertController(title: "Status", message: "Was hast du an diesem Tag gemacht?", preferredStyle: .actionSheet)
+        
         let pillTakenButton = UIAlertAction(title: "Pille genommen", style: .default, handler: {
             action in
             controlledPillDay.updateState(state: .pillTaken, result: {
                 success in
                 if(success) {
+                    self.impactGenerator?.impact(.success)
                     self.updatePillCycle()
                 }
             })
@@ -62,12 +66,14 @@ class PillCalendarController: UIViewController {
             controlledPillDay.updateState(state: .pillForgotten, result: {
                 success in
                 if(success) {
+                    self.impactGenerator?.impact(.warning)
                     self.updatePillCycle()
                 }
             })
         })
         let pillCancelButton = UIAlertAction(title: "Abbrechen", style: .cancel, handler: {
             action in
+            self.impactGenerator?.impact(.failure)
         })
         actionSheetController.addAction(pillTakenButton)
         actionSheetController.addAction(pillForgottenButton)

@@ -11,11 +11,14 @@ import RealmSwift
 import Toast_Swift
 
 class SettingsViewController: UIViewController {
+    
+    var impactGenerator: ImpactGenerator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.impactGenerator = ImpactGenerator(view: self.view)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +31,7 @@ class SettingsViewController: UIViewController {
         try! realm.write {
             realm.deleteAll()
         }
+        self.impactGenerator?.impact(.warning)
         self.view.makeToast("Alle Daten wurden gelöscht", duration: 2.0, position: .bottom)
     }
 

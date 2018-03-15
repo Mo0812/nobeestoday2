@@ -18,11 +18,14 @@ class PillTakingController: UIViewController {
     let formatter = DateFormatter()
     var dateTarget: TimeInterval = 0.0
     var timer: Timer?
+    
+    var impactGenerator: ImpactGenerator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.impactGenerator = ImpactGenerator(view: self.view)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -102,6 +105,7 @@ class PillTakingController: UIViewController {
     
     @IBAction func pillTaken(_ sender: AnyObject) {
         LocalNotificationService.shared.pillTakenAction(completionHandler: {
+            self.impactGenerator?.impact(.success)
             self.updateTimeDiff()
         })
     }
