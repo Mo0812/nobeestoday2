@@ -113,8 +113,9 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> ()) {
         
-        // Determine the user action
         GlobalValues.updateCurrentTakingPeriodOnCycleChange()
+        
+        // Determine the user action
         switch response.actionIdentifier {
             case UNNotificationDismissActionIdentifier:
                 print("Dismiss Action")
