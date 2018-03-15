@@ -10,9 +10,6 @@ import UIKit
 
 class MainPageViewController: UIPageViewController {
     
-    // The custom UIPageControl
-    @IBOutlet weak var pageControl: UIPageControl!
-    
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newViewController(ref: "CalendarView"), self.newViewController(ref: "PillView"),
                 self.newViewController(ref: "SettingsView")]
@@ -31,10 +28,14 @@ class MainPageViewController: UIPageViewController {
         
         setViewControllers([orderedViewControllers[1]], direction: .forward, animated: false, completion: nil)
 
-        // Configure our custom pageControl
-        view.bringSubview(toFront: pageControl)
-        pageControl.numberOfPages = orderedViewControllers.count
-        pageControl.currentPage = 0
+        //configuring custom page control
+        //self.menuControl = UIView(frame: CGRect(x: 25, y: 25, width: 100, height: 50))
+        //self.menuControl?.backgroundColor = UIColor.red
+        //self.view.addSubview(self.menuControl!)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
