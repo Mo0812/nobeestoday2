@@ -104,7 +104,7 @@ class PillTakingController: UIViewController {
     }
     
     @IBAction func pillTaken(_ sender: AnyObject) {
-        LocalNotificationService.shared.pillTakenAction(completionHandler: {
+        GlobalValues.pillTakenAction(completionHandler: {
             self.impactGenerator?.impact(.success)
             self.updateTimeDiff()
         })

@@ -22,6 +22,10 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         self.initNotificationActions()
     }
     
+    public func enablePermissions() {
+        
+    }
+    
     private func initNotificationService() {
         let options: UNAuthorizationOptions = [.alert, .sound]
         
@@ -51,8 +55,8 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         content.body = "Es ist Zeit deine Pille zu nehmen"
         content.sound = UNNotificationSound.default()
         
-        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: forDate)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        let triggerDaily = Calendar.current.dateComponents([.year, .month, .day, .hour,.minute,.second,], from: forDate)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)
         
         let identifier = "NBTDailyNotification"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
@@ -64,12 +68,9 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
                 // Something went wrong
             }
         })
+        self.registerStressNotifications(forDate: forDate)
         
         
-    }
-    
-    private func removeStressNotifications() {
-        self.center.removePendingNotificationRequests(withIdentifiers: ["NBTStressNotification1", "NBTStressNotification2", "NBTStressNotification3"])
     }
     
     private func registerStressNotifications(forDate: Date) {
@@ -88,7 +89,7 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         content.body = body
         content.sound = UNNotificationSound.default()
         
-        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: forDate)
+        let triggerDaily = Calendar.current.dateComponents([.year, .month, .day, .hour,.minute,.second,], from: forDate)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
@@ -101,14 +102,33 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         })
     }
     
+    private func removeStressNotifications() {
+        self.center.removePendingNotificationRequests(withIdentifiers: ["NBTStressNotification1", "NBTStressNotification2", "NBTStressNotification3"])
+    }
+    
+    public func removeAllPendingNotifications() {
+        self.center.removeAllPendingNotificationRequests()
+    }
+    
+    public func printPendingNotifications() {
+        self.center.getPendingNotificationRequests { (requests) in
+            print("\(requests.count) requests -------")
+            for request in requests{
+                print(request.identifier)
+                print(request.trigger ?? "trigger time")
+            }
+        }
+    }
+    
     /** MARK: UNUserNotificationCenterDelegate **/
     
+    // Apps recieve notification in foreground
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> ()) {
         // Play sound and show alert to the user
-        completionHandler([.alert,.sound])
+        /*completionHandler([.alert,.sound])
         if notification.request.identifier == "NBTDailyNotification" {
             self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
-        }
+        }*/
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> ()) {
@@ -122,36 +142,12 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
             case UNNotificationDefaultActionIdentifier:
                 print("Default")
             case "NBTPillTakenAction":
-                self.pillTakenAction()
+                GlobalValues.pillTakenAction()
             case "NBTPillRemindMeLater":
                 print("Snooze")
             default:
                 print("Unknown action")
         }
         completionHandler()
-    }
-    
-    func pillTakenAction() {
-        self.pillTakenAction(completionHandler: {})
-    }
-    
-    func pillTakenAction(completionHandler: @escaping () -> ()) {
-        print("Genommen")
-        self.removeStressNotifications()
-        //self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
-        if let pd = GlobalValues.getCurrentPillDayFromStorage() {
-            pd.updateState(state: .pillTaken, result: {
-                success in
-                completionHandler()
-            })
-        } else {
-            let pd = PillDay(day: GlobalValues.normalizeDate(Date()), state: .pillTaken)
-            pd.updateState(result: {
-                success in
-                if success {
-                    completionHandler()
-                }
-            })
-        }
     }
 }

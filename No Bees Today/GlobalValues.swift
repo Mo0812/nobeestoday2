@@ -70,6 +70,12 @@ class GlobalValues {
         }
     }
     
+    class func getTimePerDayForTomorrow() -> Date? {
+        var date = GlobalValues.getTimePerDay()
+        date?.addTimeInterval(60 * 60 * 24)
+        return date
+    }
+    
     class func normalizeDate(_ date: Date) -> Date {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.year, .month, .day], from: date)
@@ -86,12 +92,55 @@ class GlobalValues {
         }
     }
     
+    class func getCurrentPillCycleFromStorage() -> PillCycle? {
+        guard let currentPeriod = GlobalValues.currentTakingPeriod else { return nil }
+        let pc = PillCycle(startDate: currentPeriod)
+        return pc
+    }
+    
     class func updateCurrentTakingPeriodOnCycleChange() {
         if let ctp = self.currentTakingPeriod {
             let swapDate = ctp.addingTimeInterval(60 * 60 * 24 * 28)
             if swapDate < Date() {
                 self.setCurrentTakingPeriod(swapDate)
             }
+        }
+    }
+    
+    class func setNotifications(for date: Date) {
+        guard let pc = GlobalValues.getCurrentPillCycleFromStorage() else { return }
+        
+        if pc.isInBloodTime(date: date) {
+            LocalNotificationService.shared.removeAllPendingNotifications()
+        } else {
+            LocalNotificationService.shared.registerDailyNotifications(forDate: date)
+        }
+        /*if let pd = GlobalValues.getCurrentPillDayFromStorage() {
+            if pd.state == PillDay.PillDayState.pillBlood.rawValue {
+                return
+            }
+        }*/
+    }
+    
+    class func pillTakenAction() {
+        GlobalValues.pillTakenAction(completionHandler: {})
+    }
+    
+    class func pillTakenAction(completionHandler: @escaping () -> ()) {
+        GlobalValues.setNotifications(for: GlobalValues.getTimePerDayForTomorrow()!)
+        if let pd = GlobalValues.getCurrentPillDayFromStorage() {
+            pd.updateState(state: .pillTaken, result: {
+                success in
+                completionHandler()
+            })
+        } else {
+            let pd = PillDay(day: GlobalValues.normalizeDate(Date()), state: .pillTaken)
+            pd.updateState(result: {
+                success in
+                if success {
+                    completionHandler()
+                }
+            })
         }
     }
 

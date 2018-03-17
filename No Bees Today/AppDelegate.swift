@@ -16,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //NotificationService.sharedInstance.initNotificationService()
-        let _ = LocalNotificationService.shared
+        // Enable Notifications
+        LocalNotificationService.shared.enablePermissions()
         
+        // If no cycle data is included, show config screen!
         let initSuccess = GlobalValues.initDates()
         if !initSuccess {
             let preSettingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PreSettingsView")
@@ -26,8 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
         
-        GlobalValues.updateCurrentTakingPeriodOnCycleChange()
-        
+        // Set fetch minimum
         application.setMinimumBackgroundFetchInterval(60)
                 
         return true
@@ -49,14 +49,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        // Is cycle complete and the next cycle should start?
+        GlobalValues.updateCurrentTakingPeriodOnCycleChange()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("BG Task")
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {        
+        if let tpd = GlobalValues.getTimePerDay() {
+            // Before taking time today
+            if tpd.timeIntervalSinceNow > 0 {
+                GlobalValues.setNotifications(for: tpd)
+            } else { //or after
+                GlobalValues.setNotifications(for: GlobalValues.getTimePerDayForTomorrow()!)
+            }
+        }
         completionHandler(.newData)
     }
     

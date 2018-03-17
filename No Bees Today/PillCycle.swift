@@ -71,6 +71,16 @@ class PillCycle {
         }
     }
     
+    public func isInBloodTime(date: Date) -> Bool {
+        if self.bloodCycle.contains(where: { (pd) -> Bool in
+            return Calendar.current.compare(pd.day, to: date, toGranularity: .day) == .orderedSame
+        }) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     public func getLastBloodDay() -> PillDay? {
         return self.bloodCycle.last
     }

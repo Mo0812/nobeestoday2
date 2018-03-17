@@ -12,7 +12,7 @@ class PreSettingsTTPDViewController: UIViewController {
 
     @IBOutlet weak var ttpdDatePicker: UIDatePicker!
     
-    var ttpd:String = "19:00:00"
+    var ttpd:String = "12:00:00"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class PreSettingsTTPDViewController: UIViewController {
 
     @IBAction func nextPreSetting(_ sender: Any) {
         GlobalValues.setTimePerDay(value: self.ttpd)
-        LocalNotificationService.shared.registerDailyNotifications(forDate: GlobalValues.getTimePerDay()!)
+        GlobalValues.setNotifications(for: GlobalValues.getTimePerDay()!)
         self.performSegue(withIdentifier: "showFinishedView", sender: self)
     }
     
