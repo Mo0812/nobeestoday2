@@ -16,7 +16,6 @@
 		C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */; };
 		C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */; };
 		C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */; };
-		C5C2DCDD1ED3866A00E5B523 /* PillTakingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2DCDC1ED3866A00E5B523 /* PillTakingController.swift */; };
 		C5F263E01ED0EB21002DBF5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263DF1ED0EB21002DBF5A /* AppDelegate.swift */; };
 		C5F263E21ED0EB21002DBF5A /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F263E11ED0EB21002DBF5A /* MainPageViewController.swift */; };
 		C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F263E31ED0EB21002DBF5A /* Main.storyboard */; };
@@ -48,7 +47,6 @@
 		C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFinishedViewController.swift; sourceTree = "<group>"; };
 		C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsTTPDViewController.swift; sourceTree = "<group>"; };
 		C5AFC4E21ED87A3C0004C6D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		C5C2DCDC1ED3866A00E5B523 /* PillTakingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PillTakingController.swift; sourceTree = "<group>"; };
 		C5F263DC1ED0EB21002DBF5A /* No Bees Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No Bees Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F263DF1ED0EB21002DBF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F263E11ED0EB21002DBF5A /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -125,14 +123,6 @@
 			name = PreSettings;
 			sourceTree = "<group>";
 		};
-		C5C2DCDE1ED3876400E5B523 /* PillTaking */ = {
-			isa = PBXGroup;
-			children = (
-				C5C2DCDC1ED3866A00E5B523 /* PillTakingController.swift */,
-			);
-			name = PillTaking;
-			sourceTree = "<group>";
-		};
 		C5F263D31ED0EB21002DBF5A = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +182,6 @@
 			children = (
 				C5FF70AF2060556E0016B2DB /* PillInfo */,
 				C5AFC4DA1ED863500004C6D8 /* PreSettings */,
-				C5C2DCDE1ED3876400E5B523 /* PillTaking */,
 				C5F263F91ED0FA07002DBF5A /* PillCalendar */,
 				C5796F711ED5D33A0006601D /* Settings */,
 				C55CA28B2059E79C003D06B1 /* Menu */,
@@ -380,7 +369,6 @@
 				C5F264001ED0FC4C002DBF5A /* PillDay.swift in Sources */,
 				C5F263E01ED0EB21002DBF5A /* AppDelegate.swift in Sources */,
 				C5FF70B7206077D10016B2DB /* PillInfoCell.swift in Sources */,
-				C5C2DCDD1ED3866A00E5B523 /* PillTakingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
