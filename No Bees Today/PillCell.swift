@@ -13,6 +13,7 @@ class PillCell: UICollectionViewCell {
     @IBOutlet weak var pillImage: UIImageView!
     @IBOutlet weak var weekdayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var currentDayImage: UIImageView!
     
 }
 
