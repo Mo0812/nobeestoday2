@@ -132,6 +132,8 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
         
         if Calendar.current.compare(Date(), to: pillDay.day, toGranularity: .day) == .orderedSame {
             cell.currentDayImage.isHidden = false
+        } else {
+            cell.currentDayImage.isHidden = true
         }
         
         return cell

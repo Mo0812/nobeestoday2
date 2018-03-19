@@ -86,7 +86,21 @@ class PillTakingController: UIViewController {
             
             if let timePerDay = GlobalValues.getTimePerDay() {
                 let timeDiff = NSCalendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: timePerDay)
-                var pillTimerString = "\(abs(timeDiff.hour!)):\(abs(timeDiff.minute!)):\(abs(timeDiff.second!))"
+                
+                var hour = String(abs(timeDiff.hour!))
+                if hour.count == 1 {
+                    hour = "0" + hour
+                }
+                var minute = String(abs(timeDiff.minute!))
+                if minute.count == 1 {
+                    minute = "0" + minute
+                }
+                var second = String(abs(timeDiff.second!))
+                if second.count == 1 {
+                    second = "0" + second
+                }
+                
+                var pillTimerString = "\(hour):\(minute):\(second)"
                 if(timeDiff.hour! > 0 || timeDiff.minute! > 0 || timeDiff.second! > 0) {
                     self.pillTimer.textColor = UIColor.black
                     self.pillLabel.text = "Zeit bis zur Pilleneinnahme:"

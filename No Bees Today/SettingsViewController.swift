@@ -33,6 +33,7 @@ class SettingsViewController: UIViewController {
         }
         self.impactGenerator?.impact(.warning)
         self.view.makeToast("Alle Daten wurden gelöscht", duration: 2.0, position: .bottom)
+        NotificationCenter.default.post(name: Notification.Name("ClearStorageNotification"), object: nil, userInfo: nil)
     }
 
     @IBAction func showPreSettings(_ sender: Any) {

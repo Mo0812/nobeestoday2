@@ -11,7 +11,7 @@ import UIKit
 class MainPageViewController: UIPageViewController {
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newViewController(ref: "CalendarView"), self.newViewController(ref: "PillView"),
+        return [self.newViewController(ref: "CalendarView"), self.newViewController(ref: "PillInfoView"),
                 self.newViewController(ref: "SettingsView")]
     }()
     
