@@ -1,6 +1,7 @@
 # No Bees Today
 
 [![Build Status](https://travis-ci.org/Mo0812/nobeestoday2.svg?branch=master)](https://travis-ci.org/Mo0812/nobeestoday2)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/323bf6ebf36d44de8b004f42fca7539c)](https://www.codacy.com/app/Mo0812/nobeestoday2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Mo0812/nobeestoday2&amp;utm_campaign=Badge_Grade)
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)]()
 
 **No Bees Today** is an app for people who use birth control pills. The app reminds the user to take their pills at an adjusted time and keeps calling them to take the pill until they made it.
