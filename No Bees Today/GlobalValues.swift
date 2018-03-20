@@ -107,6 +107,17 @@ class GlobalValues {
         }
     }
     
+    class func updateNotifications() {
+        if let tpd = GlobalValues.getTimePerDay() {
+            // Before taking time today
+            if tpd.timeIntervalSinceNow > 0 {
+                GlobalValues.setNotifications(for: tpd)
+            } else { //or after
+                GlobalValues.setNotifications(for: GlobalValues.getTimePerDayForTomorrow()!)
+            }
+        }
+    }
+    
     class func setNotifications(for date: Date) {
         guard let pc = GlobalValues.getCurrentPillCycleFromStorage() else { return }
         

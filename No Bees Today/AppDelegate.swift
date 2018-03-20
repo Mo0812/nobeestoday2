@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Is cycle complete and the next cycle should start?
         GlobalValues.updateCurrentTakingPeriodOnCycleChange()
+        GlobalValues.updateNotifications()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -59,14 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {        
-        if let tpd = GlobalValues.getTimePerDay() {
-            // Before taking time today
-            if tpd.timeIntervalSinceNow > 0 {
-                GlobalValues.setNotifications(for: tpd)
-            } else { //or after
-                GlobalValues.setNotifications(for: GlobalValues.getTimePerDayForTomorrow()!)
-            }
-        }
+        GlobalValues.updateNotifications()
         completionHandler(.newData)
     }
     
