@@ -19,16 +19,15 @@ class PillInfoCollectionViewController: UICollectionViewController, UICollection
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        /*for reuseIdentifier in reuseIdentifiers {
+        /* for reuseIdentifier in reuseIdentifiers {
             //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        }*/
+        } */
 
         // Do any additional setup after loading the view.
         self.collectionView?.alwaysBounceVertical = true
         //self.automaticallyAdjustsScrollViewInsets = false
         self.collectionView?.contentInsetAdjustmentBehavior = .automatic
-    
     }
     
     override func viewDidAppear(_ animated: Bool) {

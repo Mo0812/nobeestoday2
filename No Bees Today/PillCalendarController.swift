@@ -55,7 +55,7 @@ class PillCalendarController: UIViewController {
             action in
             controlledPillDay.updateState(state: .pillTaken, result: {
                 success in
-                if(success) {
+                if success {
                     self.impactGenerator?.impact(.success)
                     self.updatePillCycle()
                 }
@@ -80,6 +80,7 @@ class PillCalendarController: UIViewController {
         actionSheetController.addAction(pillCancelButton)
         self.present(actionSheetController, animated: true, completion: nil)
     }
+    
 }
 
 extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -119,7 +120,7 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
         formatter.dateFormat = "dd.MM."
         cell.dateLabel.text = formatter.string(from: pillDay.day as Date)
         
-        switch(pillDay.state) {
+        switch pillDay.state {
         case 0:
             cell.pillImage.image = UIImage(named: "pill-taken")
         case 1:

@@ -9,7 +9,6 @@
 import UIKit
 
 class PillTakingCollectionViewCell: PillInfoCell {
-    
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var pillImage: UIImageView!
     @IBOutlet weak var pillLabel: UILabel!

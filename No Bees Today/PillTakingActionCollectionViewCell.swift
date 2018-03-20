@@ -9,7 +9,6 @@
 import UIKit
 
 class PillTakingActionCollectionViewCell: PillInfoCell {
-    
     @IBOutlet weak var takenButton: UIButton!
     
     var impactGenerator: ImpactGenerator?
@@ -40,4 +39,5 @@ class PillTakingActionCollectionViewCell: PillInfoCell {
             self.takenButton.isEnabled = true
         }
     }
+    
 }

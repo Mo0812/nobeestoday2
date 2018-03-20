@@ -28,10 +28,10 @@ class MainPageViewController: UIPageViewController {
         
         setViewControllers([orderedViewControllers[1]], direction: .forward, animated: false, completion: nil)
 
-        //configuring custom page control
-        //self.menuControl = UIView(frame: CGRect(x: 25, y: 25, width: 100, height: 50))
-        //self.menuControl?.backgroundColor = UIColor.red
-        //self.view.addSubview(self.menuControl!)
+        // configuring custom page control
+        // self.menuControl = UIView(frame: CGRect(x: 25, y: 25, width: 100, height: 50))
+        // self.menuControl?.backgroundColor = UIColor.red
+        // self.view.addSubview(self.menuControl!)
     }
     
     override func viewDidLayoutSubviews() {
@@ -101,7 +101,7 @@ extension MainPageViewController: UIPageViewControllerDataSource, UIPageViewCont
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        //print("Changed")
+        // print("Changed")
     }
     
 }

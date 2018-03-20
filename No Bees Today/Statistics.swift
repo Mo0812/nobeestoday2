@@ -19,8 +19,8 @@ class Statistics {
         
         
         
-        var dayCounter = 0;
-        var takenCounter = 0;
+        var dayCounter = 0
+        var takenCounter = 0
         for pd in currentCycle.cycle {
             if Calendar.current.compare(pd.day, to: currentDay.day, toGranularity: .day) == .orderedSame {
                 break

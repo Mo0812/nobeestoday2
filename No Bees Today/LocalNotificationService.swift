@@ -10,7 +10,6 @@ import Foundation
 import UserNotifications
 
 class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
-    
     static let tomorrow: TimeInterval = 60 * 60 * 24
     static let shared = LocalNotificationService()
     private var center: UNUserNotificationCenter
@@ -150,4 +149,5 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         }
         completionHandler()
     }
+    
 }

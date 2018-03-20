@@ -32,7 +32,7 @@ class PreSettingsFTDViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Korrekte Änderung der Daten über die boolsche Variable und die beiden Funktionen?
+    // MARK: Korrekte Änderung der Daten über die boolsche Variable und die beiden Funktionen?
     @IBAction func nextPreSetting(_ sender: Any) {
         if self.changedGivenDate {
             let alert = UIAlertController(title: "Änderung des Zyklusdatums", message: "Wenn du das Zyklumdatum änderst, gehen alle bisherigen Daten verlorden", preferredStyle: UIAlertControllerStyle.alert)
