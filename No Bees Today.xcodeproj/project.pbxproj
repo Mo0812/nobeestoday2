@@ -30,6 +30,8 @@
 		C5FF70B3206067440016B2DB /* PillTakingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF70B2206067440016B2DB /* PillTakingCollectionViewCell.swift */; };
 		C5FF70B5206067580016B2DB /* PillTakingActionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF70B4206067580016B2DB /* PillTakingActionCollectionViewCell.swift */; };
 		C5FF70B7206077D10016B2DB /* PillInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF70B6206077D10016B2DB /* PillInfoCell.swift */; };
+		C5FF70BB206087AE0016B2DB /* StatisticCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF70BA206087AE0016B2DB /* StatisticCollectionViewCell.swift */; };
+		C5FF70BD20608AD10016B2DB /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF70BC20608AD10016B2DB /* Statistics.swift */; };
 		C5FF9335205B21F000B22B0B /* ImpactGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF9334205B21F000B22B0B /* ImpactGenerator.swift */; };
 		F2B8F4B0E1CDBEE25C7C4E04 /* Pods_No_Bees_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		C5FF70B2206067440016B2DB /* PillTakingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTakingCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5FF70B4206067580016B2DB /* PillTakingActionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTakingActionCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5FF70B6206077D10016B2DB /* PillInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillInfoCell.swift; sourceTree = "<group>"; };
+		C5FF70BA206087AE0016B2DB /* StatisticCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5FF70BC20608AD10016B2DB /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		C5FF9334205B21F000B22B0B /* ImpactGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactGenerator.swift; sourceTree = "<group>"; };
 		D19E3C047BF19774457B3C01 /* Pods-No Bees Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +177,7 @@
 				C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */,
 				C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */,
 				C5FF9334205B21F000B22B0B /* ImpactGenerator.swift */,
+				C5FF70BC20608AD10016B2DB /* Statistics.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		C5FF70AF2060556E0016B2DB /* PillInfo */ = {
 			isa = PBXGroup;
 			children = (
+				C5FF70BA206087AE0016B2DB /* StatisticCollectionViewCell.swift */,
 				C5FF70B0206055850016B2DB /* PillInfoCollectionViewController.swift */,
 				C5FF70B2206067440016B2DB /* PillTakingCollectionViewCell.swift */,
 				C5FF70B4206067580016B2DB /* PillTakingActionCollectionViewCell.swift */,
@@ -352,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FF70B3206067440016B2DB /* PillTakingCollectionViewCell.swift in Sources */,
+				C5FF70BB206087AE0016B2DB /* StatisticCollectionViewCell.swift in Sources */,
 				C5FF70B5206067580016B2DB /* PillTakingActionCollectionViewCell.swift in Sources */,
 				C5F263E21ED0EB21002DBF5A /* MainPageViewController.swift in Sources */,
 				C5FF9335205B21F000B22B0B /* ImpactGenerator.swift in Sources */,
@@ -368,6 +375,7 @@
 				C5F263F71ED0F7FB002DBF5A /* GlobalValues.swift in Sources */,
 				C5F264001ED0FC4C002DBF5A /* PillDay.swift in Sources */,
 				C5F263E01ED0EB21002DBF5A /* AppDelegate.swift in Sources */,
+				C5FF70BD20608AD10016B2DB /* Statistics.swift in Sources */,
 				C5FF70B7206077D10016B2DB /* PillInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

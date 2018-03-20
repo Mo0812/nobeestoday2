@@ -81,10 +81,13 @@ class PillInfoCollectionViewController: UICollectionViewController, UICollection
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellIdentifier = reuseIdentifiers[indexPath.row]
-        if cellIdentifier == "PillTakingCell" {
+        switch cellIdentifier {
+        case "PillTakingCell":
             return CGSize(width: 330, height: 250)
-        } else {
-            return CGSize(width: 330, height: 100)
+        case "StatisticCell":
+            return CGSize(width: 330, height: 150)
+        default:
+            return CGSize(width: 330, height: 75)
         }
     }
     
