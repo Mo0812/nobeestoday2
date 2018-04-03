@@ -21,6 +21,7 @@ class PillTakingActionCollectionViewCell: PillInfoCell {
         self.updateView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateView), name: Notification.Name("ClearStorageNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateView), name: Notification.Name("PillStateChanged"), object: nil)
     }
     
     @IBAction func pillTaken(_ sender: Any) {

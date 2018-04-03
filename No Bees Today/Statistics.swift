@@ -15,9 +15,7 @@ class Statistics {
     }
     
     public func calculateCycleReview() -> [Int]? {
-        guard let currentCycle = GlobalValues.getCurrentPillCycleFromStorage(), let currentDay = currentCycle.getCurrentPillDay() else { return nil }
-        
-        
+        guard let currentCycle = GlobalValues.getCurrentPillCycleFromStorage(), let currentDay = currentCycle.getCurrentPillDay() else { return nil }        
         
         var dayCounter = 0
         var takenCounter = 0

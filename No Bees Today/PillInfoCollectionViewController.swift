@@ -84,7 +84,7 @@ class PillInfoCollectionViewController: UICollectionViewController, UICollection
         case "PillTakingCell":
             return CGSize(width: 330, height: 250)
         case "StatisticCell":
-            return CGSize(width: 330, height: 150)
+            return CGSize(width: 330, height: 250)
         default:
             return CGSize(width: 330, height: 75)
         }

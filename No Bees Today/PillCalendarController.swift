@@ -57,6 +57,7 @@ class PillCalendarController: UIViewController {
                 success in
                 if success {
                     self.impactGenerator?.impact(.success)
+                    NotificationCenter.default.post(name: Notification.Name("PillStateChanged"), object: nil, userInfo: nil)
                     self.updatePillCycle()
                 }
             })
@@ -67,6 +68,7 @@ class PillCalendarController: UIViewController {
                 success in
                 if(success) {
                     self.impactGenerator?.impact(.warning)
+                    NotificationCenter.default.post(name: Notification.Name("PillStateChanged"), object: nil, userInfo: nil)
                     self.updatePillCycle()
                 }
             })

@@ -11,6 +11,7 @@
 		C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55CA2942059EDA1003D06B1 /* MenuView.swift */; };
 		C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5796F6F1ED5D3370006601D /* SettingsViewController.swift */; };
 		C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */; };
+		C58BB27C2073DE6900809710 /* StatisticsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BB27B2073DE6900809710 /* StatisticsFormatter.swift */; };
 		C58E29042055F69700105FAD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C58E29022055F69700105FAD /* .gitignore */; };
 		C58E29052055F69700105FAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C58E29032055F69700105FAD /* README.md */; };
 		C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */; };
@@ -43,6 +44,7 @@
 		C55CA2942059EDA1003D06B1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C5796F6F1ED5D3370006601D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
+		C58BB27B2073DE6900809710 /* StatisticsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsFormatter.swift; sourceTree = "<group>"; };
 		C58E29022055F69700105FAD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		C58E29032055F69700105FAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFTDViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,15 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		C58BB27A2073DE4F00809710 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF70BC20608AD10016B2DB /* Statistics.swift */,
+				C58BB27B2073DE6900809710 /* StatisticsFormatter.swift */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
 		C5AFC4DA1ED863500004C6D8 /* PreSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,10 +185,10 @@
 		C5F263F31ED0F5A2002DBF5A /* Globals */ = {
 			isa = PBXGroup;
 			children = (
+				C58BB27A2073DE4F00809710 /* Statistics */,
 				C5F263F61ED0F7FB002DBF5A /* GlobalValues.swift */,
 				C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */,
 				C5FF9334205B21F000B22B0B /* ImpactGenerator.swift */,
-				C5FF70BC20608AD10016B2DB /* Statistics.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -311,13 +322,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-No Bees Today-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4A3DE121FD1133905ACCA79B /* [CP] Copy Pods Resources */ = {
@@ -341,9 +355,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -357,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58BB27C2073DE6900809710 /* StatisticsFormatter.swift in Sources */,
 				C5FF70B3206067440016B2DB /* PillTakingCollectionViewCell.swift in Sources */,
 				C5FF70BB206087AE0016B2DB /* StatisticCollectionViewCell.swift in Sources */,
 				C5FF70B5206067580016B2DB /* PillTakingActionCollectionViewCell.swift in Sources */,

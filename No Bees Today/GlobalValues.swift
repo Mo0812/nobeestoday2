@@ -126,11 +126,6 @@ class GlobalValues {
         } else {
             LocalNotificationService.shared.registerDailyNotifications(forDate: date)
         }
-        /*if let pd = GlobalValues.getCurrentPillDayFromStorage() {
-            if pd.state == PillDay.PillDayState.pillBlood.rawValue {
-                return
-            }
-        }*/
     }
     
     class func pillTakenAction() {

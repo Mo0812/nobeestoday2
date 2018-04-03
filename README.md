@@ -21,3 +21,4 @@ Take a look at the [issue](https://github.com/Mo0812/nobeestoday2/issues) settin
 The following frameworks are being used in this ab:
 * [RealmSwift](https://github.com/realm/realm-cocoa/tree/master/RealmSwift)
 * [Toast-Swift](https://github.com/scalessec/Toast-Swift)
+* [Charts](https://github.com/danielgindi/Charts)

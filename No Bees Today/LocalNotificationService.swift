@@ -14,6 +14,10 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     static let shared = LocalNotificationService()
     private var center: UNUserNotificationCenter
     
+    private let interval1: Double = 30
+    private let interval2: Double = 60
+    private let interval3: Double = 3600
+    
     override init() {
         self.center = UNUserNotificationCenter.current()
         super.init()
@@ -73,9 +77,9 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     }
     
     private func registerStressNotifications(forDate: Date) {
-        self.generateStressNotification(identifierSuffix: "1", forDate: forDate.addingTimeInterval(60 * 0.5), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
-        self.generateStressNotification(identifierSuffix: "2", forDate: forDate.addingTimeInterval(60 * 1), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
-        self.generateStressNotification(identifierSuffix: "3", forDate: forDate.addingTimeInterval(60 * 60), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+        self.generateStressNotification(identifierSuffix: "1", forDate: forDate.addingTimeInterval(self.interval1), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+        self.generateStressNotification(identifierSuffix: "2", forDate: forDate.addingTimeInterval(self.interval2), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
+        self.generateStressNotification(identifierSuffix: "3", forDate: forDate.addingTimeInterval(self.interval3), title: "Deine Pille wartet auf dich", body: "Du hast die Pille immer noch nicht genommen, jetzt aber wirklich!")
 
     }
     
