@@ -25,22 +25,7 @@ class StatisticCollectionViewCell: PillInfoCell {
     }
     
     @objc func updateView() {
-        guard let pc = GlobalValues.getCurrentPillCycleFromStorage() else { return }
-        var taken = 0
-        var forgotten = 0
-        var open = 0
-        for pd in pc.cycle {
-            switch pd.state {
-            case PillDay.PillDayState.pillTaken.rawValue:
-                taken += 1
-            case PillDay.PillDayState.pillNotYetTaken.rawValue:
-                open += 1
-            case PillDay.PillDayState.pillForgotten.rawValue:
-                forgotten += 1
-            default: break
-                
-            }
-        }
+        guard let statisticData = Statistics.shared.getCurrentPillCylceStatistic() else { return }
         
         resultPieChartView.centerText = "Monatsstatistik"
         resultPieChartView.chartDescription?.text = ""
@@ -50,10 +35,11 @@ class StatisticCollectionViewCell: PillInfoCell {
         let legend = resultPieChartView.legend
         legend.horizontalAlignment = .center
         legend.drawInside = false
+        legend.enabled = false
         
-        let takenDataEntry = PieChartDataEntry(value: Double(taken), label: "genommen")
-        let forgottenDataEntry = PieChartDataEntry(value: Double(forgotten))
-        let openDateEntry = PieChartDataEntry(value: Double(open))
+        let takenDataEntry = PieChartDataEntry(value: Double(statisticData[PillDay.PillDayState.pillTaken.rawValue]!))
+        let forgottenDataEntry = PieChartDataEntry(value: Double(statisticData[PillDay.PillDayState.pillForgotten.rawValue]!))
+        let openDateEntry = PieChartDataEntry(value: Double(statisticData[PillDay.PillDayState.pillNotYetTaken.rawValue]!))
         
         let dataSet = PieChartDataSet(values: [takenDataEntry, forgottenDataEntry, openDateEntry], label: nil)
         dataSet.colors = [NSUIColor(red: 89/255, green: 189/255, blue: 53/255, alpha: 1.0), NSUIColor(red: 236 / 255, green: 125 / 255, blue: 123 / 255, alpha: 1.0), NSUIColor.groupTableViewBackground]

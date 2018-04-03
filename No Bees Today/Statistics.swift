@@ -10,6 +10,8 @@ import Foundation
 
 class Statistics {
     
+    static let shared = Statistics()
+    
     init() {
         
     }
@@ -32,6 +34,21 @@ class Statistics {
         var retArr = [Int]()
         retArr.append(dayCounter)
         retArr.append(takenCounter)
+        
+        return retArr
+    }
+    
+    public func getCurrentPillCylceStatistic() -> [Int: Int]? {
+        guard let pc = GlobalValues.getCurrentPillCycleFromStorage() else { return nil }
+        var retArr = [Int: Int]()
+        
+        for pd in pc.cycle {
+            if let _ = retArr[pd.state] {
+                retArr[pd.state]! += 1
+            } else {
+                retArr[pd.state] = 1
+            }
+        }
         
         return retArr
     }
