@@ -10,11 +10,26 @@ Also **No Bees Today** runs totally offline and saves all the user data into a l
 
 ## Status
 
-This project is still in a early pre-beta stage. Neither the design nor the usability or the scope of functions are already finalized. Just the underlying concept of storing objects and the algorithm to calculate a cycle and access persistent informations from every place in the programm is already nearly finished.
+This project is still in a early beta stage. Neither the design nor the usability or the scope of functions are already finalized. Just the underlying concept of storing objects and the algorithm to calculate a cycle and access persistent informations from every place in the programm is already nearly finished.
 
 ## Roadmap
 
 Take a look at the [issue](https://github.com/Mo0812/nobeestoday2/issues) settings!
+
+## Contribution
+
+I currently develop this app on my own, but everyone is welcome to contribute some code or changes! 
+
+For everyone who wants to test the latest development status:
+* clone and build the app on your own *or*
+* send me a **direct message** with **your name** and **your email adress** at [@Mo0812](https://twitter.com/Mo0812) to join on **Testflight**.
+
+## Goals for building this app
+
+* Gaining more experience in building an iOS app from scratch up to the App Store
+* Help to build an alternative for existing pill-reminding-apps with focus on owning your own medical data
+* Have a playground to testing new technologies
+* Build an solid open source app for a real world scenario
 
 ## Used frameworks
 
