@@ -11,6 +11,7 @@
 		C55CA2932059ECFA003D06B1 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55CA2922059ECFA003D06B1 /* MenuView.xib */; };
 		C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55CA2942059EDA1003D06B1 /* MenuView.swift */; };
 		C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5796F6F1ED5D3370006601D /* SettingsViewController.swift */; };
+		C57C6E602076206D001DA90F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C57C6E5F2076206D001DA90F /* Settings.bundle */; };
 		C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */; };
 		C58BB27C2073DE6900809710 /* StatisticsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BB27B2073DE6900809710 /* StatisticsFormatter.swift */; };
 		C58E29042055F69700105FAD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C58E29022055F69700105FAD /* .gitignore */; };
@@ -45,6 +46,7 @@
 		C55CA2922059ECFA003D06B1 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		C55CA2942059EDA1003D06B1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C5796F6F1ED5D3370006601D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C57C6E5F2076206D001DA90F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
 		C58BB27B2073DE6900809710 /* StatisticsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsFormatter.swift; sourceTree = "<group>"; };
 		C58E29022055F69700105FAD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				C58E29022055F69700105FAD /* .gitignore */,
 				C58E29032055F69700105FAD /* README.md */,
 				C5F263EB1ED0EB21002DBF5A /* Info.plist */,
+				C57C6E5F2076206D001DA90F /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				C5F263EA1ED0EB21002DBF5A /* LaunchScreen.storyboard in Resources */,
 				C5F263E71ED0EB21002DBF5A /* Assets.xcassets in Resources */,
 				C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */,
+				C57C6E602076206D001DA90F /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

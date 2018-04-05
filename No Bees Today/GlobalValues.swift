@@ -149,5 +149,14 @@ class GlobalValues {
             })
         }
     }
+    
+    class func getAppVersion() -> String? {
+        guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return nil }
+        return version
+    }
+    
+    class func registerAppVersion() {
+        UserDefaults.standard.set(GlobalValues.getAppVersion(), forKey: "appVersion")
+    }
 
 }
