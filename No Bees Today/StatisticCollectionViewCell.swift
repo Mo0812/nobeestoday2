@@ -28,7 +28,7 @@ class StatisticCollectionViewCell: PillInfoCell {
     @objc func updateView() {
         guard let statisticData = Statistics.shared.getCurrentPillCylceStatistic() else { return }
         
-        resultPieChartView.centerText = "Monatsstatistik"
+        resultPieChartView.centerText = NSLocalizedString("Monthly statistics", comment: "")
         resultPieChartView.chartDescription?.text = ""
         resultPieChartView.rotationEnabled = false
         resultPieChartView.rotationAngle = 180

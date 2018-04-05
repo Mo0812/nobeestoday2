@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C514AC582074192500AAA690 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514AC572074192500AAA690 /* SettingsTableViewController.swift */; };
+		C5493DC52076CE830007D494 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5493DC32076CE830007D494 /* Localizable.strings */; };
 		C55CA2932059ECFA003D06B1 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55CA2922059ECFA003D06B1 /* MenuView.xib */; };
 		C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55CA2942059EDA1003D06B1 /* MenuView.swift */; };
 		C57C6E602076206D001DA90F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C57C6E5F2076206D001DA90F /* Settings.bundle */; };
@@ -43,6 +44,10 @@
 		1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_No_Bees_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64E6E284D6925C5723C588 /* Pods-No Bees Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C514AC572074192500AAA690 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		C5493DBF2076CC690007D494 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		C5493DC02076CC690007D494 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C5493DC42076CE830007D494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5493DC62076CE8D0007D494 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C55CA2922059ECFA003D06B1 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		C55CA2942059EDA1003D06B1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C57C6E5F2076206D001DA90F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -54,7 +59,6 @@
 		C5AFC4DB1ED863780004C6D8 /* PreSettingsFTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFTDViewController.swift; sourceTree = "<group>"; };
 		C5AFC4DD1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsFinishedViewController.swift; sourceTree = "<group>"; };
 		C5AFC4DF1ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSettingsTTPDViewController.swift; sourceTree = "<group>"; };
-		C5AFC4E21ED87A3C0004C6D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C5F263DC1ED0EB21002DBF5A /* No Bees Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No Bees Today.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F263DF1ED0EB21002DBF5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F263E11ED0EB21002DBF5A /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				C5F263EB1ED0EB21002DBF5A /* Info.plist */,
 				C57C6E6120763E48001DA90F /* Pods-acknowledgements.plist */,
 				C57C6E5F2076206D001DA90F /* Settings.bundle */,
+				C5493DC32076CE830007D494 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = C5F263D31ED0EB21002DBF5A;
 			productRefGroup = C5F263DD1ED0EB21002DBF5A /* Products */;
@@ -314,6 +320,7 @@
 				C55CA2932059ECFA003D06B1 /* MenuView.xib in Resources */,
 				C58E29042055F69700105FAD /* .gitignore in Resources */,
 				C57C6E6220763E48001DA90F /* Pods-acknowledgements.plist in Resources */,
+				C5493DC52076CE830007D494 /* Localizable.strings in Resources */,
 				C5F263EA1ED0EB21002DBF5A /* LaunchScreen.storyboard in Resources */,
 				C5F263E71ED0EB21002DBF5A /* Assets.xcassets in Resources */,
 				C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */,
@@ -417,11 +424,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C5493DC32076CE830007D494 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5493DC42076CE830007D494 /* Base */,
+				C5493DC62076CE8D0007D494 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C5F263E31ED0EB21002DBF5A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C5F263E41ED0EB21002DBF5A /* Base */,
-				C5AFC4E21ED87A3C0004C6D8 /* en */,
+				C5493DBF2076CC690007D494 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -430,6 +446,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C5F263E91ED0EB21002DBF5A /* Base */,
+				C5493DC02076CC690007D494 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -441,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -498,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

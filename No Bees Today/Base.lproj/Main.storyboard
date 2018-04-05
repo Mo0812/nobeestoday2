@@ -90,7 +90,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEU-Yb-Z8g">
                                             <rect key="frame" x="8" y="7" width="314" height="36"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                            <state key="normal" title="Pille genommen"/>
+                                            <state key="normal" title="Pill taken"/>
                                             <connections>
                                                 <action selector="pillTaken:" destination="uqO-VK-qej" eventType="touchUpInside" id="Coh-GG-R8X"/>
                                             </connections>
@@ -143,7 +143,7 @@
             </objects>
             <point key="canvasLocation" x="1193" y="-451"/>
         </scene>
-        <!--Einstellungen-->
+        <!--Settings-->
         <scene sceneID="tkU-2I-mml">
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTableViewOLD" id="Ys9-dI-BXz" customClass="SettingsTableViewController" customModule="No_Bees_Today" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,7 +190,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Zykluseinstellungen" id="vSW-gc-FTP">
+                            <tableViewSection headerTitle="Cycle settings" id="vSW-gc-FTP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GJV-MV-Xce">
                                         <rect key="frame" x="0.0" y="281" width="375" height="44"/>
@@ -218,7 +218,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Gespeicherte Daten" id="US0-2Y-1it">
+                            <tableViewSection headerTitle="Saved data" id="US0-2Y-1it">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sea-oZ-cEu">
                                         <rect key="frame" x="0.0" y="469" width="375" height="44"/>
@@ -229,7 +229,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCR-b1-fDt">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
-                                                    <state key="normal" title="Gespeicherte Daten löschen"/>
+                                                    <state key="normal" title="Delete saved data"/>
                                                     <connections>
                                                         <action selector="resetAllData:" destination="Ys9-dI-BXz" eventType="touchUpInside" id="8xy-hB-dHt"/>
                                                     </connections>
@@ -252,7 +252,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ge6-t8-ib6">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
-                                                    <state key="normal" title="App zurücksetzen"/>
+                                                    <state key="normal" title="Reset app and storage"/>
                                                     <connections>
                                                         <segue destination="dFY-dD-nAu" kind="show" id="xlY-xe-sRh"/>
                                                     </connections>
@@ -268,7 +268,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Informationen" id="RL0-QN-Ftw">
+                            <tableViewSection headerTitle="Informations" id="RL0-QN-Ftw">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="T9M-Q3-PeJ" detailTextLabel="Hha-rr-YNW" style="IBUITableViewCellStyleValue1" id="k3s-sN-ySc">
                                         <rect key="frame" x="0.0" y="613" width="375" height="44"/>
@@ -301,7 +301,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Fehler melden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hui-6a-VfW">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Report an error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hui-6a-VfW">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -313,17 +313,17 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Lizenzen" id="L8x-Ci-VKj">
+                            <tableViewSection headerTitle="License" id="L8x-Ci-VKj">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Eig-U8-gir" style="IBUITableViewCellStyleDefault" id="hT0-WC-urp">
                                         <rect key="frame" x="0.0" y="757" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hT0-WC-urp" id="PlQ-G3-H9U">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Icons von Icons8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eig-U8-gir">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Icons by Icons8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eig-U8-gir">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -336,11 +336,11 @@
                                         <rect key="frame" x="0.0" y="801" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="frV-EW-cow" id="hKC-fY-oEm">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Acknowledgements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zji-SO-FqM">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -357,7 +357,7 @@
                             <outlet property="delegate" destination="Ys9-dI-BXz" id="r54-9y-CO3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Einstellungen" id="U9F-uI-2Ja"/>
+                    <navigationItem key="navigationItem" title="Settings" id="U9F-uI-2Ja"/>
                     <connections>
                         <outlet property="versionLabel" destination="Hha-rr-YNW" id="HJS-bj-6r1"/>
                     </connections>
@@ -386,8 +386,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einrichtung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deb-Z4-hAB">
-                                <rect key="frame" x="24" y="81.5" width="327" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Installation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deb-Z4-hAB">
+                                <rect key="frame" x="24" y="81.5" width="327" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -398,12 +398,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aN-ud-gEU">
                                 <rect key="frame" x="24" y="439" width="327" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <state key="normal" title="Weiter"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextPreSetting:" destination="z8t-sb-ytO" eventType="touchUpInside" id="wYR-mP-2bx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wann hast du zuletzt begonnen die Pille zu nehmen?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAX-E3-LBH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When did your last taking cycle started?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAX-E3-LBH">
                                 <rect key="frame" x="24" y="133" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4jZ-8X-bJa"/>
@@ -450,7 +450,7 @@
             </objects>
             <point key="canvasLocation" x="526" y="257"/>
         </scene>
-        <!--Kalender-->
+        <!--Calendar-->
         <scene sceneID="HwM-Jm-7ju">
             <objects>
                 <viewController storyboardIdentifier="CalendarViewOLD" id="EeQ-8d-SoW" customClass="PillCalendarController" customModule="No_Bees_Today" customModuleProvider="target" sceneMemberID="viewController">
@@ -535,7 +535,7 @@
                             <constraint firstItem="MbX-n4-PBn" firstAttribute="top" secondItem="o8V-I8-vUm" secondAttribute="top" constant="20" id="u8t-Sl-0Fb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kalender" id="7UG-iB-4u6"/>
+                    <navigationItem key="navigationItem" title="Calendar" id="7UG-iB-4u6"/>
                     <connections>
                         <outlet property="collectionView" destination="MbX-n4-PBn" id="azz-j9-JJh"/>
                     </connections>
@@ -556,8 +556,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einrichtung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnM-BY-VAe">
-                                <rect key="frame" x="24" y="81.5" width="327" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Installation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnM-BY-VAe">
+                                <rect key="frame" x="24" y="81.5" width="327" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -568,12 +568,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQh-eM-BKd">
                                 <rect key="frame" x="24" y="439" width="327" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <state key="normal" title="Weiter"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextPreSetting:" destination="SLn-zs-sNZ" eventType="touchUpInside" id="afz-Vh-j6l"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zu welcher Uhrzeit nimmst du die Pille gewöhnlich?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGL-fe-Hgs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At which time do you take your pill regulary?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGL-fe-Hgs">
                                 <rect key="frame" x="24" y="133" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tlw-Gz-E65"/>
@@ -632,8 +632,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einrichtung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-S1-KAo">
-                                <rect key="frame" x="24" y="81.5" width="327" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Installation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-S1-KAo">
+                                <rect key="frame" x="24" y="81.5" width="327" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -645,12 +645,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-IQ-oBj">
                                 <rect key="frame" x="24" y="263" width="327" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <state key="normal" title="Fertig"/>
+                                <state key="normal" title="Ready"/>
                                 <connections>
                                     <action selector="closePreSettings:" destination="x21-5D-YRg" eventType="touchUpInside" id="XZh-2z-gJr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einrichtung abgeschlossen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nT-Sq-PmL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Installation successfully finished." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nT-Sq-PmL">
                                 <rect key="frame" x="24" y="133" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eEt-2V-tX4"/>
@@ -693,8 +693,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einrichtung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6B-3a-gLe">
-                                <rect key="frame" x="24" y="125.5" width="327" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Installation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6B-3a-gLe">
+                                <rect key="frame" x="24" y="125.5" width="327" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -702,7 +702,7 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="erD-lU-pxB">
                                 <rect key="frame" x="24" y="104" width="327" height="2.5"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diese App erinnert dich an die Einnahme deiner Pille." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-xl-z8t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app reminds you of taking your pill regulary every day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2y-xl-z8t">
                                 <rect key="frame" x="24" y="177" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XpL-4I-hUc"/>
@@ -716,7 +716,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="t39-8L-h3H"/>
                                 </constraints>
-                                <string key="text">Zunächst musst du allerdings angeben, wann du mit das letzte mal einen Pillenzyklus angefangen hast und um wie viel Uhr du für gewöhnlich deine Pille einnimmst.</string>
+                                <string key="text">To do so, you need to enter at first on which date your last taking cycle have been started and on which time of the day you regulary take your pill.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -724,7 +724,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUP-zo-fOh">
                                 <rect key="frame" x="24" y="397" width="327" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <state key="normal" title="Weiter"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="z8t-sb-ytO" kind="presentation" modalTransitionStyle="crossDissolve" id="8gg-eO-lDp"/>
                                 </connections>

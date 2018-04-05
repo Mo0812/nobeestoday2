@@ -35,18 +35,18 @@ class PillTakingCollectionViewCell: PillInfoCell {
             case .pillTaken:
             self.pillImage.image = UIImage(named: "pill-taken")
             self.pillTimer.textColor = UIColor.black
-            self.pillLabel.text = "Du hast die Pille eingenommen"
-            self.pillTimer.text = "Super!"
+            self.pillLabel.text = NSLocalizedString("You have taken your pill", comment: "")
+            self.pillTimer.text = NSLocalizedString("Perfect!", comment: "")
             case .pillBlood:
             self.pillImage.image = UIImage(named: "blood")
             self.pillTimer.textColor = UIColor.black
-            self.pillLabel.text = "Heute ist keine Pille nötig"
+            self.pillLabel.text = NSLocalizedString("Today no pill is needed", comment: "")
             self.pillTimer.text = ""
             case .pillForgotten:
             self.pillImage.image = UIImage(named: "pill-forgotten")
             self.pillTimer.textColor = UIColor.red
-            self.pillLabel.text = "Du hast deine Pille vergessen"
-            self.pillTimer.text = "Denk dran!"
+            self.pillLabel.text = NSLocalizedString("You forgot to take the pill", comment: "")
+            self.pillTimer.text = NSLocalizedString("Remember!", comment: "")
             default:
             self.pillImage.image = UIImage(named: "pill")
             self.pillLabel.text = ""
@@ -74,10 +74,10 @@ class PillTakingCollectionViewCell: PillInfoCell {
                 var pillTimerString = "\(hour):\(minute):\(second)"
                 if (timeDiff.hour! > 0 || timeDiff.minute! > 0 || timeDiff.second! > 0) {
                     self.pillTimer.textColor = UIColor.black
-                    self.pillLabel.text = "Zeit bis zur Pilleneinnahme:"
+                    self.pillLabel.text = NSLocalizedString("Time until pill taking:", comment: "")
                 } else {
                     self.pillTimer.textColor = UIColor.red
-                    self.pillLabel.text = "Du hast deine Pille noch nicht genommen:"
+                    self.pillLabel.text = NSLocalizedString("You haven't take your pill yet:", comment: "")
                     pillTimerString = "- " + pillTimerString
                 }
                 self.pillTimer.text = pillTimerString

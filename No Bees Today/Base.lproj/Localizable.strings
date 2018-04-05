@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  No Bees Today
+
+  Created by Moritz Kanzler on 05.04.18.
+  Copyright © 2018 Moritz Kanzler. All rights reserved.
+*/
+
+"You haven't take your pill yet:" = "You haven't take your pill yet:";
+"Time until pill taking:" = "Time until pill taking:";
+"You forgot to take the pill" = "You forgot to take the pill";
+"Remember!" = "Remember!";
+"Today no pill is needed" = "Today no pill is needed";
+"You have taken your pill" = "You have taken your pill";
+"Perfect!" = "Perfect!";
+"Monthly statistics" = "Monthly statistics";
+"What's happen today?" = "What's happen today?";
+"Pill taken" = "Pill taken";
+"Pill forgotten" = "Pill forgotten";
+"Abort" = "Abort";

@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  No Bees Today
+
+  Created by Moritz Kanzler on 05.04.18.
+  Copyright © 2018 Moritz Kanzler. All rights reserved.
+*/
+
+"You haven't take your pill yet:" = "Du hast deine Pille noch nicht genommen:";
+"Time until pill taking:" = "Zeit bis zur Pilleneinnahme:";
+"You forgot to take the pill" = "Du hast deine Pille vergessen";
+"Remember!" = "Denk dran!";
+"Today no pill is needed" = "Heute ist keine Pille nötig";
+"You have taken your pill" = "Du hast die Pille eingenommen";
+"Perfect!" = "Super!";
+"Monthly statistics" = "Monatsstatistik";
+"What's happen today?" = "Was hast du an diesem Tag gemacht?";
+"Pill taken" = "Pille genommen";
+"Pill forgotten" = "Pille vergessen";
+"Abort" = "Abbrechen";

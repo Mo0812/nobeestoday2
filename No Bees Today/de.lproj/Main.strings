@@ -1,0 +1,102 @@
+
+/* Class = "UIButton"; normalTitle = "Ready"; ObjectID = "1IL-IQ-oBj"; */
+"1IL-IQ-oBj.normalTitle" = "Fertig";
+
+/* Class = "UILabel"; text = "To do so, you need to enter at first on which date your last taking cycle have been started and on which time of the day you regulary take your pill."; ObjectID = "3Wh-ff-pmg"; */
+"3Wh-ff-pmg.text" = "Zunächst musst du allerdings angeben, wann du das letzte mal mit deinem Pillenzyklus angefangen hast und um wie viel Uhr du für gewöhnlich deine Pille einnimmst.";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "3aN-ud-gEU"; */
+"3aN-ud-gEU.normalTitle" = "Weiter";
+
+/* Class = "UILabel"; text = "Installation successfully finished."; ObjectID = "3nT-Sq-PmL"; */
+"3nT-Sq-PmL.text" = "Einrichtung abgeschlossen.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7EH-EJ-2hR"; */
+"7EH-EJ-2hR.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Calendar"; ObjectID = "7UG-iB-4u6"; */
+"7UG-iB-4u6.title" = "Kalender";
+
+/* Class = "UILabel"; text = "Installation"; ObjectID = "7d3-S1-KAo"; */
+"7d3-S1-KAo.text" = "Einrichtung";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "AUP-zo-fOh"; */
+"AUP-zo-fOh.normalTitle" = "Weiter";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Cxa-uJ-4K4"; */
+"Cxa-uJ-4K4.text" = "Label";
+
+/* Class = "UILabel"; text = "Installation"; ObjectID = "Deb-Z4-hAB"; */
+"Deb-Z4-hAB.text" = "Einrichtung";
+
+/* Class = "UILabel"; text = "Icons by Icons8"; ObjectID = "Eig-U8-gir"; */
+"Eig-U8-gir.text" = "Icons von Icons8";
+
+/* Class = "UIButton"; normalTitle = "Reset app and storage"; ObjectID = "Ge6-t8-ib6"; */
+"Ge6-t8-ib6.normalTitle" = "App zurücksetzen";
+
+/* Class = "UILabel"; text = "n.A."; ObjectID = "Hha-rr-YNW"; */
+"Hha-rr-YNW.text" = "n.A.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IXD-dV-7jq"; */
+"IXD-dV-7jq.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "License"; ObjectID = "L8x-Ci-VKj"; */
+"L8x-Ci-VKj.headerTitle" = "Lizenz";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations"; ObjectID = "RL0-QN-Ftw"; */
+"RL0-QN-Ftw.headerTitle" = "Informationen";
+
+/* Class = "UILabel"; text = "Version"; ObjectID = "T9M-Q3-PeJ"; */
+"T9M-Q3-PeJ.text" = "Version";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "U9F-uI-2Ja"; */
+"U9F-uI-2Ja.title" = "Einstellungen";
+
+/* Class = "UITableViewSection"; headerTitle = "Saved data"; ObjectID = "US0-2Y-1it"; */
+"US0-2Y-1it.headerTitle" = "Gespeicherte Daten";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WDj-Zy-4gS"; */
+"WDj-Zy-4gS.text" = "Label";
+
+/* Class = "UILabel"; text = "Acknowledgements"; ObjectID = "Zji-SO-FqM"; */
+"Zji-SO-FqM.text" = "Danksagungen";
+
+/* Class = "UIButton"; normalTitle = "Delete saved data"; ObjectID = "aCR-b1-fDt"; */
+"aCR-b1-fDt.normalTitle" = "Gespeicherte Daten löschen";
+
+/* Class = "UILabel"; text = "Installation"; ObjectID = "d6B-3a-gLe"; */
+"d6B-3a-gLe.text" = "Einrichtung";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "ev2-Jd-z2J"; */
+"ev2-Jd-z2J.text" = "Status";
+
+/* Class = "UILabel"; text = "Report an error"; ObjectID = "hui-6a-VfW"; */
+"hui-6a-VfW.text" = "Fehler melden";
+
+/* Class = "UILabel"; text = "No Bees Today"; ObjectID = "lj7-05-ies"; */
+"lj7-05-ies.text" = "No Bees Today";
+
+/* Class = "UIButton"; normalTitle = "Pill taken"; ObjectID = "rEU-Yb-Z8g"; */
+"rEU-Yb-Z8g.normalTitle" = "Pille genommen";
+
+/* Class = "UILabel"; text = "Installation"; ObjectID = "rnM-BY-VAe"; */
+"rnM-BY-VAe.text" = "Einrichtung";
+
+/* Class = "UILabel"; text = " 🐝"; ObjectID = "s3Y-Ji-ne0"; */
+"s3Y-Ji-ne0.text" = " 🐝";
+
+/* Class = "UILabel"; text = "When did your last taking cycle started?"; ObjectID = "sAX-E3-LBH"; */
+"sAX-E3-LBH.text" = "Wann hast du zuletzt begonnen die Pille zu nehmen?";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "sQh-eM-BKd"; */
+"sQh-eM-BKd.normalTitle" = "Weiter";
+
+/* Class = "UILabel"; text = "At which time do you take your pill regulary?"; ObjectID = "tGL-fe-Hgs"; */
+"tGL-fe-Hgs.text" = "Zu welcher Uhrzeit nimmst du die Pille gewöhnlich?";
+
+/* Class = "UITableViewSection"; headerTitle = "Cycle settings"; ObjectID = "vSW-gc-FTP"; */
+"vSW-gc-FTP.headerTitle" = "Zykluseinstellungen";
+
+/* Class = "UILabel"; text = "This app reminds you of taking your pill regulary every day."; ObjectID = "x2y-xl-z8t"; */
+"x2y-xl-z8t.text" = "Diese App erinnert dich an die Einnahme deiner Pille.";

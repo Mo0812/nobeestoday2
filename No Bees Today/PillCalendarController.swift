@@ -51,9 +51,9 @@ class PillCalendarController: UIViewController {
     }
     
     func showActionSheet(controlledPillDay: PillDay) {
-        let actionSheetController = UIAlertController(title: "Status", message: "Was hast du an diesem Tag gemacht?", preferredStyle: .actionSheet)
+        let actionSheetController = UIAlertController(title: "Status", message: NSLocalizedString("What's happen today?", comment: ""), preferredStyle: .actionSheet)
         
-        let pillTakenButton = UIAlertAction(title: "Pille genommen", style: .default, handler: {
+        let pillTakenButton = UIAlertAction(title: NSLocalizedString("Pill taken", comment: ""), style: .default, handler: {
             action in
             controlledPillDay.updateState(state: .pillTaken, result: {
                 success in
@@ -64,7 +64,7 @@ class PillCalendarController: UIViewController {
                 }
             })
         })
-        let pillForgottenButton = UIAlertAction(title: "Pille vergessen", style: .destructive, handler: {
+        let pillForgottenButton = UIAlertAction(title: NSLocalizedString("Pill forgotten", comment: ""), style: .destructive, handler: {
             action in
             controlledPillDay.updateState(state: .pillForgotten, result: {
                 success in
@@ -75,7 +75,7 @@ class PillCalendarController: UIViewController {
                 }
             })
         })
-        let pillCancelButton = UIAlertAction(title: "Abbrechen", style: .cancel, handler: {
+        let pillCancelButton = UIAlertAction(title: NSLocalizedString("Abort", comment: ""), style: .cancel, handler: {
             action in
             self.impactGenerator?.impact(.failure)
         })
@@ -117,11 +117,10 @@ extension PillCalendarController: UICollectionViewDataSource, UICollectionViewDe
         let pillDay = self.pillCycleArr[indexPath.row]
         // Configure the cell
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "de_DE")
         formatter.dateFormat = "EE"
         cell.weekdayLabel.text = formatter.string(from: pillDay.day as Date)
         
-        formatter.dateFormat = "dd.MM."
+        formatter.setLocalizedDateFormatFromTemplate("ddMM")
         cell.dateLabel.text = formatter.string(from: pillDay.day as Date)
         
         switch pillDay.state {
