@@ -9,6 +9,7 @@
 import UIKit
 import Toast_Swift
 import RealmSwift
+import AcknowList
 
 class SettingsTableViewController: UITableViewController {
 
@@ -116,6 +117,10 @@ class SettingsTableViewController: UITableViewController {
         if indexPath.section == 4 {
             if indexPath.row == 0 {
                 UIApplication.shared.open(URL(string: "https://icons8.de/")!, options: [:], completionHandler: nil)
+            }
+            if indexPath.row == 1 {
+                let acknowViewController = AcknowListViewController()
+                self.navigationController?.pushViewController(acknowViewController, animated: true)
             }
         }
     }
