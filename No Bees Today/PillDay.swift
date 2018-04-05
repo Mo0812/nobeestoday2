@@ -16,6 +16,8 @@ class PillDay: Object {
         case pillBlood = 1
         case pillForgotten = 2
         case pillNotYetTaken = 3
+        
+        static let allValues = [pillTaken, pillBlood, pillForgotten, pillNotYetTaken]
     }
     
     @objc dynamic var day: Date = Date()

@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable Notifications
         LocalNotificationService.shared.enablePermissions()
         
+        GlobalValues.registerAppVersion()
+        
         // If no cycle data is included, show config screen!
         let initSuccess = GlobalValues.initDates()
         if !initSuccess {

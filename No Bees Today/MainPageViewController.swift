@@ -12,7 +12,7 @@ class MainPageViewController: UIPageViewController {
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newViewController(ref: "CalendarView"), self.newViewController(ref: "PillInfoView"),
-                self.newViewController(ref: "SettingsView")]
+                self.newViewController(ref: "SettingsTableView")]
     }()
     
     private func newViewController(ref: String) -> UIViewController {

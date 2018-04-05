@@ -11,3 +11,7 @@ target 'No Bees Today' do
   pod 'Charts'
 
 end
+
+post_install do | installer |
+  system("sh tools/copyAcknowledgments.sh")
+end

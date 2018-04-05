@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C514AC582074192500AAA690 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514AC572074192500AAA690 /* SettingsTableViewController.swift */; };
 		C55CA2932059ECFA003D06B1 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55CA2922059ECFA003D06B1 /* MenuView.xib */; };
 		C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55CA2942059EDA1003D06B1 /* MenuView.swift */; };
-		C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5796F6F1ED5D3370006601D /* SettingsViewController.swift */; };
+		C57C6E602076206D001DA90F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C57C6E5F2076206D001DA90F /* Settings.bundle */; };
 		C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */; };
 		C58BB27C2073DE6900809710 /* StatisticsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58BB27B2073DE6900809710 /* StatisticsFormatter.swift */; };
 		C58E29042055F69700105FAD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C58E29022055F69700105FAD /* .gitignore */; };
@@ -40,9 +41,10 @@
 /* Begin PBXFileReference section */
 		1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_No_Bees_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64E6E284D6925C5723C588 /* Pods-No Bees Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.debug.xcconfig"; sourceTree = "<group>"; };
+		C514AC572074192500AAA690 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		C55CA2922059ECFA003D06B1 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		C55CA2942059EDA1003D06B1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		C5796F6F1ED5D3370006601D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C57C6E5F2076206D001DA90F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
 		C58BB27B2073DE6900809710 /* StatisticsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsFormatter.swift; sourceTree = "<group>"; };
 		C58E29022055F69700105FAD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		C5796F711ED5D33A0006601D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				C5796F6F1ED5D3370006601D /* SettingsViewController.swift */,
+				C514AC572074192500AAA690 /* SettingsTableViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -178,6 +180,7 @@
 				C58E29022055F69700105FAD /* .gitignore */,
 				C58E29032055F69700105FAD /* README.md */,
 				C5F263EB1ED0EB21002DBF5A /* Info.plist */,
+				C57C6E5F2076206D001DA90F /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				C5F263EA1ED0EB21002DBF5A /* LaunchScreen.storyboard in Resources */,
 				C5F263E71ED0EB21002DBF5A /* Assets.xcassets in Resources */,
 				C5F263E51ED0EB21002DBF5A /* Main.storyboard in Resources */,
+				C57C6E602076206D001DA90F /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,12 +392,12 @@
 				C5FF9335205B21F000B22B0B /* ImpactGenerator.swift in Sources */,
 				C5F263FB1ED0FA24002DBF5A /* PillCell.swift in Sources */,
 				C5F263FD1ED0FB86002DBF5A /* PillCalendarController.swift in Sources */,
-				C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */,
 				C5F264021ED1021E002DBF5A /* PillCycle.swift in Sources */,
 				C5AFC4DC1ED863780004C6D8 /* PreSettingsFTDViewController.swift in Sources */,
 				C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */,
 				C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */,
 				C5FF70B1206055850016B2DB /* PillInfoCollectionViewController.swift in Sources */,
+				C514AC582074192500AAA690 /* SettingsTableViewController.swift in Sources */,
 				C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */,
 				C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */,
 				C5F263F71ED0F7FB002DBF5A /* GlobalValues.swift in Sources */,
