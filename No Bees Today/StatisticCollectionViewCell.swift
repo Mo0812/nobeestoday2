@@ -21,6 +21,7 @@ class StatisticCollectionViewCell: PillInfoCell {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateView), name: Notification.Name("ClearStorageNotification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateView), name: Notification.Name("PillStateChanged"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateView), name: Notification.Name("PillTakingNotification"), object: nil)
         self.updateView()
     }
     
