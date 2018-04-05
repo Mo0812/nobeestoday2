@@ -16,4 +16,3 @@ class PillCell: UICollectionViewCell {
     @IBOutlet weak var currentDayImage: UIImageView!
     
 }
-

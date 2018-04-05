@@ -31,7 +31,7 @@ class PillTakingCollectionViewCell: PillInfoCell {
         if let currentPD = GlobalValues.getCurrentPillDayFromStorage() {
             
             let state = PillDay.PillDayState(rawValue: currentPD.state)!
-            switch(state) {
+            switch state {
             case .pillTaken:
             self.pillImage.image = UIImage(named: "pill-taken")
             self.pillTimer.textColor = UIColor.black
@@ -72,7 +72,7 @@ class PillTakingCollectionViewCell: PillInfoCell {
                 }
                 
                 var pillTimerString = "\(hour):\(minute):\(second)"
-                if(timeDiff.hour! > 0 || timeDiff.minute! > 0 || timeDiff.second! > 0) {
+                if (timeDiff.hour! > 0 || timeDiff.minute! > 0 || timeDiff.second! > 0) {
                     self.pillTimer.textColor = UIColor.black
                     self.pillLabel.text = "Zeit bis zur Pilleneinnahme:"
                 } else {

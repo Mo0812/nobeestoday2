@@ -68,7 +68,7 @@ class PillCalendarController: UIViewController {
             action in
             controlledPillDay.updateState(state: .pillForgotten, result: {
                 success in
-                if(success) {
+                if success {
                     self.impactGenerator?.impact(.warning)
                     NotificationCenter.default.post(name: Notification.Name("PillStateChanged"), object: nil, userInfo: nil)
                     self.updatePillCycle()

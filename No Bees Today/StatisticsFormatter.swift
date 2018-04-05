@@ -17,4 +17,5 @@ class StatisticsFormatter: IValueFormatter {
             return ""
         }
     }
+    
 }

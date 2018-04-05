@@ -57,4 +57,5 @@ class StatisticCollectionViewCell: PillInfoCell {
         resultPieChartView.notifyDataSetChanged()
 
     }
+    
 }

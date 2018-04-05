@@ -112,7 +112,7 @@ class GlobalValues {
             // Before taking time today
             if tpd.timeIntervalSinceNow > 0 {
                 GlobalValues.setNotifications(for: tpd)
-            } else { //or after
+            } else { // or after
                 GlobalValues.setNotifications(for: GlobalValues.getTimePerDayForTomorrow()!)
             }
         }

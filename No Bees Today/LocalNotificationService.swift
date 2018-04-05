@@ -116,7 +116,7 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     public func printPendingNotifications() {
         self.center.getPendingNotificationRequests { (requests) in
             print("\(requests.count) requests -------")
-            for request in requests{
+            for request in requests {
                 print(request.identifier)
                 print(request.trigger ?? "trigger time")
             }
@@ -128,10 +128,10 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
     // Apps recieve notification in foreground
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> ()) {
         // Play sound and show alert to the user
-        /*completionHandler([.alert,.sound])
+        /* completionHandler([.alert,.sound])
         if notification.request.identifier == "NBTDailyNotification" {
             self.registerStressNotifications(forDate: GlobalValues.getTimePerDay()!)
-        }*/
+        } */
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> ()) {
