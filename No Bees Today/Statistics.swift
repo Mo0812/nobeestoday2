@@ -42,6 +42,10 @@ class Statistics {
         guard let pc = GlobalValues.getCurrentPillCycleFromStorage() else { return nil }
         var retArr = [Int: Int]()
         
+        for state in PillDay.PillDayState.allValues {
+            retArr[state.rawValue] = 0
+        }
+        
         for pd in pc.cycle {
             if let _ = retArr[pd.state] {
                 retArr[pd.state]! += 1

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C514AC582074192500AAA690 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514AC572074192500AAA690 /* SettingsTableViewController.swift */; };
 		C55CA2932059ECFA003D06B1 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55CA2922059ECFA003D06B1 /* MenuView.xib */; };
 		C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55CA2942059EDA1003D06B1 /* MenuView.swift */; };
 		C5796F701ED5D3370006601D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5796F6F1ED5D3370006601D /* SettingsViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_No_Bees_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64E6E284D6925C5723C588 /* Pods-No Bees Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.debug.xcconfig"; sourceTree = "<group>"; };
+		C514AC572074192500AAA690 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		C55CA2922059ECFA003D06B1 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		C55CA2942059EDA1003D06B1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C5796F6F1ED5D3370006601D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C5796F6F1ED5D3370006601D /* SettingsViewController.swift */,
+				C514AC572074192500AAA690 /* SettingsTableViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				C5AFC4E01ED86FD80004C6D8 /* PreSettingsTTPDViewController.swift in Sources */,
 				C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */,
 				C5FF70B1206055850016B2DB /* PillInfoCollectionViewController.swift in Sources */,
+				C514AC582074192500AAA690 /* SettingsTableViewController.swift in Sources */,
 				C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */,
 				C5AFC4DE1ED86D8D0004C6D8 /* PreSettingsFinishedViewController.swift in Sources */,
 				C5F263F71ED0F7FB002DBF5A /* GlobalValues.swift in Sources */,

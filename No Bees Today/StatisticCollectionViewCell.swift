@@ -37,9 +37,10 @@ class StatisticCollectionViewCell: PillInfoCell {
         legend.drawInside = false
         legend.enabled = false
         
-        let takenDataEntry = PieChartDataEntry(value: Double(statisticData[PillDay.PillDayState.pillTaken.rawValue]!))
-        let forgottenDataEntry = PieChartDataEntry(value: Double(statisticData[PillDay.PillDayState.pillForgotten.rawValue]!))
-        let openDateEntry = PieChartDataEntry(value: Double(statisticData[PillDay.PillDayState.pillNotYetTaken.rawValue]!))
+        guard let takenData = statisticData[PillDay.PillDayState.pillTaken.rawValue], let forgottenData = statisticData[PillDay.PillDayState.pillForgotten.rawValue], let openData = statisticData[PillDay.PillDayState.pillNotYetTaken.rawValue] else { return }
+        let takenDataEntry = PieChartDataEntry(value: Double(takenData))
+        let forgottenDataEntry = PieChartDataEntry(value: Double(forgottenData))
+        let openDateEntry = PieChartDataEntry(value: Double(openData))
         
         let dataSet = PieChartDataSet(values: [takenDataEntry, forgottenDataEntry, openDateEntry], label: nil)
         dataSet.colors = [NSUIColor(red: 89/255, green: 189/255, blue: 53/255, alpha: 1.0), NSUIColor(red: 236 / 255, green: 125 / 255, blue: 123 / 255, alpha: 1.0), NSUIColor.groupTableViewBackground]
