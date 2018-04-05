@@ -12,6 +12,10 @@ Also **No Bees Today** runs totally offline and saves all the user data into a l
 
 This project is still in a early beta stage. Neither the design nor the usability or the scope of functions are already finalized. Just the underlying concept of storing objects and the algorithm to calculate a cycle and access persistent informations from every place in the programm is already nearly finished.
 
+## Localization
+
+Currently there is a localization for english (Base) and german language, but I want to support as many languages as possible. So please feel free to create a PR and fill the projects with as many languages as possible. Also there might be someone who correct my english translations currently.
+
 ## Roadmap
 
 Take a look at the [issue](https://github.com/Mo0812/nobeestoday2/issues) settings!
