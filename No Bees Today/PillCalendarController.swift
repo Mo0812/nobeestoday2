@@ -24,6 +24,8 @@ class PillCalendarController: UIViewController {
         self.collectionView.delegate = self
         // Register cell classes
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
 
         // Do any additional setup after loading the view.
         self.impactGenerator = ImpactGenerator(view: self.view)
