@@ -12,6 +12,7 @@
 		C55CA2932059ECFA003D06B1 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55CA2922059ECFA003D06B1 /* MenuView.xib */; };
 		C55CA2952059EDA1003D06B1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55CA2942059EDA1003D06B1 /* MenuView.swift */; };
 		C55F021A219450F700B98276 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = C55F0219219450F700B98276 /* .travis.yml */; };
+		C55F0222219459DF00B98276 /* No_Bees_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F0221219459DF00B98276 /* No_Bees_TodayTests.swift */; };
 		C57C6E602076206D001DA90F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C57C6E5F2076206D001DA90F /* Settings.bundle */; };
 		C57C6E6220763E48001DA90F /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57C6E6120763E48001DA90F /* Pods-acknowledgements.plist */; };
 		C58B8EEB1ED8B9CB008FF88A /* LocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */; };
@@ -41,6 +42,16 @@
 		F2B8F4B0E1CDBEE25C7C4E04 /* Pods_No_Bees_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C55F0224219459DF00B98276 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5F263D41ED0EB21002DBF5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5F263DB1ED0EB21002DBF5A;
+			remoteInfo = "No Bees Today";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1D7AA73BB43F2BB8933F40B6 /* Pods_No_Bees_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_No_Bees_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE64E6E284D6925C5723C588 /* Pods-No Bees Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-No Bees Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +63,9 @@
 		C55CA2922059ECFA003D06B1 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		C55CA2942059EDA1003D06B1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C55F0219219450F700B98276 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		C55F021F219459DF00B98276 /* No Bees TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "No Bees TodayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55F0221219459DF00B98276 /* No_Bees_TodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = No_Bees_TodayTests.swift; sourceTree = "<group>"; };
+		C55F0223219459DF00B98276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57C6E5F2076206D001DA90F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C57C6E6120763E48001DA90F /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		C58B8EEA1ED8B9CB008FF88A /* LocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationService.swift; sourceTree = "<group>"; };
@@ -84,6 +98,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C55F021C219459DF00B98276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5F263D91ED0EB21002DBF5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +142,15 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		C55F0220219459DF00B98276 /* No Bees TodayTests */ = {
+			isa = PBXGroup;
+			children = (
+				C55F0221219459DF00B98276 /* No_Bees_TodayTests.swift */,
+				C55F0223219459DF00B98276 /* Info.plist */,
+			);
+			path = "No Bees TodayTests";
+			sourceTree = "<group>";
+		};
 		C5796F711ED5D33A0006601D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				C5F263DE1ED0EB21002DBF5A /* No Bees Today */,
+				C55F0220219459DF00B98276 /* No Bees TodayTests */,
 				C5F263DD1ED0EB21002DBF5A /* Products */,
 				12A4ACDD9C82BA73305644BD /* Pods */,
 				0981D222EE91F34C2C3276A6 /* Frameworks */,
@@ -162,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				C5F263DC1ED0EB21002DBF5A /* No Bees Today.app */,
+				C55F021F219459DF00B98276 /* No Bees TodayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +284,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C55F021E219459DF00B98276 /* No Bees TodayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C55F0228219459DF00B98276 /* Build configuration list for PBXNativeTarget "No Bees TodayTests" */;
+			buildPhases = (
+				C55F021B219459DF00B98276 /* Sources */,
+				C55F021C219459DF00B98276 /* Frameworks */,
+				C55F021D219459DF00B98276 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C55F0225219459DF00B98276 /* PBXTargetDependency */,
+			);
+			name = "No Bees TodayTests";
+			productName = "No Bees TodayTests";
+			productReference = C55F021F219459DF00B98276 /* No Bees TodayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C5F263DB1ED0EB21002DBF5A /* No Bees Today */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5F263EE1ED0EB21002DBF5A /* Build configuration list for PBXNativeTarget "No Bees Today" */;
@@ -277,10 +327,16 @@
 		C5F263D41ED0EB21002DBF5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Moritz Kanzler";
 				TargetAttributes = {
+					C55F021E219459DF00B98276 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 5DVZCE6TBK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C5F263DB1ED0EB21002DBF5A;
+					};
 					C5F263DB1ED0EB21002DBF5A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5DVZCE6TBK;
@@ -309,11 +365,19 @@
 			projectRoot = "";
 			targets = (
 				C5F263DB1ED0EB21002DBF5A /* No Bees Today */,
+				C55F021E219459DF00B98276 /* No Bees TodayTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C55F021D219459DF00B98276 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5F263DA1ED0EB21002DBF5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +445,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C55F021B219459DF00B98276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55F0222219459DF00B98276 /* No_Bees_TodayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5F263D81ED0EB21002DBF5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +482,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C55F0225219459DF00B98276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5F263DB1ED0EB21002DBF5A /* No Bees Today */;
+			targetProxy = C55F0224219459DF00B98276 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C5493DC32076CE830007D494 /* Localizable.strings */ = {
@@ -442,6 +522,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C55F0226219459DF00B98276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5DVZCE6TBK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "No Bees TodayTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.moritzkanzler.No-Bees-TodayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/No Bees Today.app/No Bees Today";
+			};
+			name = Debug;
+		};
+		C55F0227219459DF00B98276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5DVZCE6TBK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "No Bees TodayTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.moritzkanzler.No-Bees-TodayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/No Bees Today.app/No Bees Today";
+			};
+			name = Release;
+		};
 		C5F263EC1ED0EB21002DBF5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -602,6 +729,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C55F0228219459DF00B98276 /* Build configuration list for PBXNativeTarget "No Bees TodayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55F0226219459DF00B98276 /* Debug */,
+				C55F0227219459DF00B98276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5F263D71ED0EB21002DBF5A /* Build configuration list for PBXProject "No Bees Today" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
