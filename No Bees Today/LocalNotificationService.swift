@@ -56,7 +56,7 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         content.categoryIdentifier = "NBTDailyNotificationCategory"
         content.title = "Pille nehmen"
         content.body = "Es ist Zeit deine Pille zu nehmen"
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default
         
         let triggerDaily = Calendar.current.dateComponents([.year, .month, .day, .hour,.minute,.second,], from: forDate)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)
@@ -90,7 +90,7 @@ class LocalNotificationService: NSObject, UNUserNotificationCenterDelegate {
         content.categoryIdentifier = "NBTDailyNotificationCategory"
         content.title = title
         content.body = body
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default
         
         let triggerDaily = Calendar.current.dateComponents([.year, .month, .day, .hour,.minute,.second,], from: forDate)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)

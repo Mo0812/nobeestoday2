@@ -7,7 +7,7 @@ target 'No Bees Today' do
 
   # Pods for No Bees Today
   pod 'RealmSwift'
-  pod 'Toast-Swift'
+  pod 'Toast-Swift', '~> 3'
   pod 'Charts'
   pod 'AcknowList'
 

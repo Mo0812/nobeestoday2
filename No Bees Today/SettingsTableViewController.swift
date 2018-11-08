@@ -111,12 +111,12 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 3 {
             if indexPath.row == 1 {
-                UIApplication.shared.open(URL(string: "https://github.com/Mo0812/nobeestoday2/issues")!, options: [:], completionHandler: nil)
+                UIApplication.shared.open(URL(string: "https://github.com/Mo0812/nobeestoday2/issues")!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
         if indexPath.section == 4 {
             if indexPath.row == 0 {
-                UIApplication.shared.open(URL(string: "https://icons8.de/")!, options: [:], completionHandler: nil)
+                UIApplication.shared.open(URL(string: "https://icons8.de/")!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
             if indexPath.row == 1 {
                 let acknowViewController = AcknowListViewController()
@@ -144,4 +144,9 @@ class SettingsTableViewController: UITableViewController {
         self.view.makeToast("Alle Daten wurden gelöscht", duration: 2.0, position: .center)
         NotificationCenter.default.post(name: Notification.Name("ClearStorageNotification"), object: nil, userInfo: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

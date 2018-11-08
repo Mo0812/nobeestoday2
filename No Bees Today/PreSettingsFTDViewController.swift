@@ -35,12 +35,12 @@ class PreSettingsFTDViewController: UIViewController {
     // MARK: Korrekte Änderung der Daten über die boolsche Variable und die beiden Funktionen?
     @IBAction func nextPreSetting(_ sender: Any) {
         if self.changedGivenDate {
-            let alert = UIAlertController(title: "Änderung des Zyklusdatums", message: "Wenn du das Zyklumdatum änderst, gehen alle bisherigen Daten verlorden", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Abbrechen", style: UIAlertActionStyle.default, handler: {
+            let alert = UIAlertController(title: "Änderung des Zyklusdatums", message: "Wenn du das Zyklumdatum änderst, gehen alle bisherigen Daten verlorden", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Abbrechen", style: UIAlertAction.Style.default, handler: {
                 action in
                 self.setInGivenDate()
             }))
-            alert.addAction(UIAlertAction(title: "Löschen", style: UIAlertActionStyle.cancel, handler: {
+            alert.addAction(UIAlertAction(title: "Löschen", style: UIAlertAction.Style.cancel, handler: {
                 action in
                 self.changeCycleDate(clearAll: true)
             }))

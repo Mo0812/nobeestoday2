@@ -261,7 +261,6 @@
 				C5F263D91ED0EB21002DBF5A /* Frameworks */,
 				C5F263DA1ED0EB21002DBF5A /* Resources */,
 				E341006924EC417EA5763C68 /* [CP] Embed Pods Frameworks */,
-				4A3DE121FD1133905ACCA79B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,8 +283,8 @@
 				TargetAttributes = {
 					C5F263DB1ED0EB21002DBF5A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = ELU5666M3R;
-						LastSwiftMigration = 0920;
+						DevelopmentTeam = 5DVZCE6TBK;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -351,21 +350,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4A3DE121FD1133905ACCA79B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-No Bees Today/Pods-No Bees Today-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E341006924EC417EA5763C68 /* [CP] Embed Pods Frameworks */ = {
@@ -573,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				DEVELOPMENT_TEAM = ELU5666M3R;
+				DEVELOPMENT_TEAM = 5DVZCE6TBK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -582,10 +566,9 @@
 				INFOPLIST_FILE = "No Bees Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MK.NoBeesToday;
+				PRODUCT_BUNDLE_IDENTIFIER = MK.NoBeesToday.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -596,7 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				DEVELOPMENT_TEAM = ELU5666M3R;
+				DEVELOPMENT_TEAM = 5DVZCE6TBK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -605,10 +588,9 @@
 				INFOPLIST_FILE = "No Bees Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MK.NoBeesToday;
+				PRODUCT_BUNDLE_IDENTIFIER = MK.NoBeesToday.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
