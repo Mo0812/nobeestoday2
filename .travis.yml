@@ -2,7 +2,7 @@ osx_image: xcode10.1
 language: objective-c
 
 xcode_project: No\ Bees\ Today.xcworkspace
-# xcode_scheme: MKCacheStorageTests
+xcode_scheme: No\ Bees\ Today
 
 # whitelist
 branches:
