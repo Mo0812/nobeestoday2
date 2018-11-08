@@ -8,13 +8,13 @@ PODS:
   - Realm/Headers (3.11.1)
   - RealmSwift (3.11.1):
     - Realm (= 3.11.1)
-  - Toast-Swift (3.0.1)
+  - Toast-Swift (4.0.0)
 
 DEPENDENCIES:
   - AcknowList
   - Charts
   - RealmSwift
-  - Toast-Swift (~> 3)
+  - Toast-Swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -29,8 +29,8 @@ SPEC CHECKSUMS:
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
-  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+  Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
 
-PODFILE CHECKSUM: 139d359454c02aa7fbfa445631ddb332d55d0d32
+PODFILE CHECKSUM: bbe9cd9ecf13049fc413fcd60532eaa4c7031691
 
 COCOAPODS: 1.5.3
