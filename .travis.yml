@@ -1,4 +1,4 @@
-osx_image: xcode10.1
+osx_image: xcode10
 language: objective-c
 
 xcode_project: No\ Bees\ Today.xcworkspace
